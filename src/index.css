@@ -12,15 +12,20 @@
   --color-nav-link: #030303;
 
   /* ---Fonts--- */
-  --font-sans: "Exo 2", sans-serif;
-  --font-heading: "Russo One", sans-serif;
-  --font-link: "Abel", sans-serif;
+  --font-sans: 'Exo 2', sans-serif;
+  --font-heading: 'Russo One', sans-serif;
+  --font-link: 'Abel', sans-serif;
 }
 
 body {
   font-family: var(--font-sans);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
 }
