@@ -1,13 +1,31 @@
 @import 'tailwindcss';
 
-:root {
-  --primary-color: #009fe3;
+/*--------------------------------------------------------- 
+ Variables
+----------------------------------------------------------*/
+@theme {
+  /* ---Colors--- */
+  --color-custom-primary-color: #009fe3;
+  --color-custom-secondary-color: #f7f7f7;
+
+  /* ---Text-Colors--- */
+  --color-nav-link: #030303;
+
+  /* ---Fonts--- */
+  --font-sans: 'Exo 2', sans-serif;
+  --font-heading: 'Russo One', sans-serif;
+  --font-link: 'Abel', sans-serif;
 }
 
 body {
-  font-family: 'Exo 2', sans-serif;
+  font-family: var(--font-sans);
 }
 
-h1 {
-  font-family: 'Russo One', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
 }
