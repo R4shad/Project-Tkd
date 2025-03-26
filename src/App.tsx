@@ -1,14 +1,13 @@
 import './App.css'
 import { Home } from './components/Home'
 import Navbar from './components/Navbar'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom' 
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <>
-      
       <Router>
-      <Navbar/>
+        <Navbar />
         {/* <nav className="navbar">
           <p className="nav-title">Prueba Técnica</p>
           <div className="nav-links">
@@ -21,13 +20,9 @@ function App() {
           </div>
         </nav> */}
 
-        <div className="container">
-          <Routes>
-          <Route
-              path="/"
-              element={<Home/>}
-            />
-            {/* <Route
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route
               path="/"
               element={<Home tasks={tasks} deleteTask={deleteTask} />}
             />
@@ -39,8 +34,7 @@ function App() {
               path="/edit/:id"
               element={<TaskForm createTask={createTask} editTask={editTask} />}
             /> */}
-          </Routes>
-        </div>
+        </Routes>
       </Router>
     </>
   )
