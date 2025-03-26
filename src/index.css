@@ -17,6 +17,10 @@
   --font-link: 'Abel', sans-serif;
 }
 
+:root {
+  --font-ultra-light: 50;
+}
+
 body {
   font-family: var(--font-sans);
 }
