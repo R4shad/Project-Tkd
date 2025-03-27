@@ -1,5 +1,27 @@
 import React from 'react';
 import Card from './CardTeam';
+import { CardProps } from './CardTeam';
+
+const listTeams:CardProps[] = [
+  {
+    image: "./src/assets/default.png",
+    title: "Director Departamental",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+    name: "Juan Pérez"
+  },
+  {
+    image: "./src/assets/default.png",
+    title: "Director Distrital",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+    name: "Juan Pérez"
+  },
+  {
+    image: "./src/assets/default.png",
+    title: "Director Municipal",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+    name: "Juan Pérez"
+  }
+];
 
 const Teams: React.FC = () => {
     return (
@@ -14,24 +36,9 @@ const Teams: React.FC = () => {
 
           
             <div className="team__cards flex flex-wrap justify-center gap-6">
-              <Card
-                image="./src/assets/default.png"
-                title="Director Departamental"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
-                name="Juan Pérez"
-              />
-              <Card
-                image="./src/assets/default.png"
-                title="Director Departamental"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
-                name="Juan Pérez"
-              />
-              <Card
-                image="./src/assets/default.png"
-                title="Director Departamental"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
-                name="Juan Pérez"
-              />
+              {listTeams.map((team) => (
+                <Card key={team.title} {...team} />
+              ))}
             </div>
           </div>
         </section>
