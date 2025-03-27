@@ -10,6 +10,12 @@
 
   /* ---Text-Colors--- */
   --color-nav-link: #030303;
+  --color-custom-text-title: #ffffff;
+  --color-custom-text-subtitle: #ffffff;
+  --color-custom-text-description: #ffffff;
+
+  /* ---Borders--- */
+  --color-custom-border: #F2F4F6;
 
   /* ---Fonts--- */
   --font-sans: 'Exo 2', sans-serif;

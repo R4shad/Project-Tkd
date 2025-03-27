@@ -1,14 +1,26 @@
 import './App.css'
-import { Home } from './components/Home'
+import { Hero } from './components/Hero'
 import Navbar from './components/Navbar'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom' 
+import { BrowserRouter as Router, Routes } from 'react-router-dom'
+import heroImg from './assets/hero-img.png'
+import Teams from './components/Teams'
 
 function App() {
   return (
     <>
-      
+
       <Router>
-      <Navbar/>
+        <Navbar />
+        <Hero 
+           image={heroImg} 
+           title={'Asociación Municipal de TaeKwonDo Quillacollo'} 
+           description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.'} 
+        />
+        {/* <Teams /> */}
+        <Teams />
+       
+
+
         {/* <nav className="navbar">
           <p className="nav-title">Prueba Técnica</p>
           <div className="nav-links">
@@ -23,10 +35,10 @@ function App() {
 
         <div className="container">
           <Routes>
-          <Route
+            {/* <Route
               path="/"
-              element={<Home/>}
-            />
+              element={<Hero />}
+            /> */}
             {/* <Route
               path="/"
               element={<Home tasks={tasks} deleteTask={deleteTask} />}
