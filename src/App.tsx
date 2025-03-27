@@ -1,7 +1,8 @@
 import './App.css'
+import { Home } from './components/Home'
 import { Hero } from './components/Hero'
 import Navbar from './components/Navbar'
-import { BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import heroImg from './assets/hero-img.png'
 import Teams from './components/Teams'
 
@@ -33,13 +34,9 @@ function App() {
           </div>
         </nav> */}
 
-        <div className="container">
-          <Routes>
-            {/* <Route
-              path="/"
-              element={<Hero />}
-            /> */}
-            {/* <Route
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route
               path="/"
               element={<Home tasks={tasks} deleteTask={deleteTask} />}
             />
@@ -51,8 +48,7 @@ function App() {
               path="/edit/:id"
               element={<TaskForm createTask={createTask} editTask={editTask} />}
             /> */}
-          </Routes>
-        </div>
+        </Routes>
       </Router>
     </>
   )
