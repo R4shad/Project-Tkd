@@ -4,6 +4,7 @@ import Teams from './Teams'
 import { ClubSlider } from './ClubSlider'
 import { TaekwondoBenefits } from './TaekwondoBenefits'
 import Description from './Description'
+import Maps from './Maps'
 
 export const Home = () => {
   return (
@@ -17,6 +18,11 @@ export const Home = () => {
         <Description />
         {/* <Teams /> */}
         <Teams />
+        {/*  <Maps /> */}
+        <Maps
+         lat={-17.38425}
+         lng={-66.134955555556}
+        />
       <ClubSlider />
       <TaekwondoBenefits />
     </>
