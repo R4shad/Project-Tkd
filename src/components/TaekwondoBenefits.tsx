@@ -71,7 +71,7 @@ export const TaekwondoBenefits = () => {
                 </div>
               </div>
               <p className="mt-2 font-bold text-center">{benefit.nombre}</p>
-              <p className="mt-2 text-justify px-6 font-ultra-light">
+              <p className="mt-2 text-justify px-6 font-thin">
                 {benefit.descripcion}
               </p>
             </div>

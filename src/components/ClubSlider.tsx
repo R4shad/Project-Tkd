@@ -21,7 +21,17 @@ export const ClubSlider = () => {
     <div className="flex justify-center">
       <Swiper
         modules={[Autoplay]}
-        slidesPerView={3}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         loop={true}
         autoplay={{
           delay: 2000,
