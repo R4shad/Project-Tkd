@@ -5,6 +5,7 @@ import { ClubSlider } from '../components/ClubSlider'
 import { TaekwondoBenefits } from '../components/TaekwondoBenefits'
 import Description from '../components/Description'
 import Maps from '../components/Maps'
+import { Affiliation } from '../components/Affiliation'
 
 export const Home = () => {
   return (
@@ -24,6 +25,7 @@ export const Home = () => {
       <Maps lat={-17.38425} lng={-66.134955555556} />
       <ClubSlider />
       <TaekwondoBenefits />
+      <Affiliation />
     </>
   )
 }
