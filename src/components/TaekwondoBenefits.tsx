@@ -59,7 +59,7 @@ export const TaekwondoBenefits = () => {
         <h1 className="text-center text-white pt-12 pb-12 text-2xl">
           Beneficios del Taekwondo
         </h1>
-        <div className="grid grid-cols-3 place-items-center gap-4 p-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-4 p-4">
           {benefitsOfTaekwondo.map((benefit) => (
             <div
               key={benefit.nombre}
@@ -78,7 +78,7 @@ export const TaekwondoBenefits = () => {
           ))}
         </div>
       </div>
-      <div className="flex  justify-center overflow-hidden">
+      <div className="flex  justify-center">
         <div className=" bg-custom-primary-color   rounded-bl-[75%]  w-[50%] h-20"></div>
         <div className=" bg-custom-primary-color   rounded-br-[75%] w-[50%] h-20"></div>
       </div>
