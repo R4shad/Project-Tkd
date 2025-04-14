@@ -3,6 +3,7 @@ import { Home } from './pages/Home'
 import Navbar from './components/Navbar'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { Club } from './pages/Club'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               element={<TaskForm createTask={createTask} editTask={editTask} />}
             /> */}
         </Routes>
+        <Footer />
       </Router>
     </>
   )
