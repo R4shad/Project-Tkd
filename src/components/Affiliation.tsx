@@ -7,7 +7,7 @@ export const Affiliation = () => {
         Afiliados a la Federación Boliviana de Taekwondo
       </h1>
 
-      <div className="overflow-hidden w-full max-w-[480px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px]">
+      <div className="overflow-hidden w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]">
         <img
           src={WTBimg}
           alt="WTB icon"
