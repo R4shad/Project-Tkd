@@ -1,20 +1,21 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/swiper-bundle.css' // Importar la versión completa de Swiper CSS
-import logo from './../assets/lincesIcon.png'
-import { Autoplay } from 'swiper/modules'
-const clubs: Club[] = [
-  { id: 1, name: 'Club 1', coach: 'Entrenador 1' },
-  { id: 2, name: 'Club 2', coach: 'Entrenador 2' },
-  { id: 3, name: 'Club 3', coach: 'Entrenador 3' },
-  { id: 4, name: 'Club 4', coach: 'Entrenador 4' },
-  { id: 5, name: 'Club 5', coach: 'Entrenador 5' },
-]
+import 'swiper/swiper-bundle.css'
 
-interface Club {
-  id: number
-  name: string
-  coach: string
-}
+import { Autoplay } from 'swiper/modules'
+import { IoLogoWhatsapp, IoLogoFacebook } from 'react-icons/io'
+import { ClubInfo } from '../types.d'
+
+import { antaraKwanInfo } from '../staticData'
+import { lincesKwanInfo } from '../staticData'
+import { relampagosKwanInfo } from '../staticData'
+import { aguilasKwanInfo } from '../staticData'
+
+const clubs: ClubInfo[] = [
+  antaraKwanInfo,
+  lincesKwanInfo,
+  relampagosKwanInfo,
+  aguilasKwanInfo,
+]
 
 export const ClubSlider = () => {
   return (
@@ -48,24 +49,30 @@ export const ClubSlider = () => {
     </div>
   )
 }
-
-import { IoLogoWhatsapp, IoLogoFacebook } from 'react-icons/io'
-
-const ItemSlider = ({ club }: { club: Club }) => {
+const ItemSlider = ({ club }: { club: ClubInfo }) => {
   return (
     <div className="flex flex-col items-center w-fit center place-self-center">
       <div className="w-50 h-50 rounded-full bg-gray-200 flex items-center justify-center shadow-lg">
         <img
-          src={logo}
+          src={club.logoUrl}
           alt="Club Logo"
           className="w-full h-full rounded-full object-cover"
         />
       </div>
-      <h2 className="mt-4">{club.name}</h2>
-      <p>{club.coach}</p>
+      <h2 className="mt-4">{club.clubName}</h2>
+      <p>{club.headInstructorName}</p>
       <div className="flex gap-4 text-black mt-2">
-        <IoLogoFacebook />
-        <IoLogoWhatsapp />
+        <a href={club.facebookLink} target="_blank" rel="noopener noreferrer">
+          <IoLogoFacebook />
+        </a>
+
+        <a
+          href={club.whatsappContact}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IoLogoWhatsapp />
+        </a>
       </div>
     </div>
   )
