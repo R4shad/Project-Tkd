@@ -1,4 +1,9 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import {
+  FaFacebook,
+  FaFacebookSquare,
+  FaGithub,
+  FaLinkedin,
+} from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -9,10 +14,16 @@ const Footer = () => {
             <h2 className="text-xl  text-white text-center">
               Asociación Municipal
             </h2>
-            <p className="text-sm">
-              Cochabamba - Bolivia
-              <br />
+            <p className="text-sm">Cochabamba - Bolivia</p>
+            <p className="text-sm flex items-center">
               quillacollotkd@gmail.com
+              <a
+                href="https://www.facebook.com/asoc.tkd.qllo?locale=es_LA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookSquare className="hover:text-white ml-2" />
+              </a>
             </p>
           </div>
           <div>
