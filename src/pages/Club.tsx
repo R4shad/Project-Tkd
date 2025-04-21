@@ -1,4 +1,5 @@
-import ClubDescription from '../components/clubDescription'
+import ClubDescription from '../components/ClubDescription'
+import Maps from '../components/Maps'
 
 import { clubs } from '../staticData'
 
@@ -20,6 +21,7 @@ export const Club = () => {
         title={club.clubName}
         description={club.description}
       />
+      <Maps lat={-17.38425} lng={-66.134955555556} />
     </>
   )
 }

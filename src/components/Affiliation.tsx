@@ -16,7 +16,7 @@ export const Affiliation = () => {
         />
       </div>
 
-      <p className="text-stone-950 text-lg mt-6 sm:text-sm">
+      <p className="text-stone-950 text-lg mt-6 sm:text-sm pb-8">
         La Federación Boliviana de Taekwondo es la organización rectora de este
         arte marcial en Bolivia. Su misión es promover y desarrollar la práctica
         del Taekwondo en el país, así como organizar competiciones y eventos

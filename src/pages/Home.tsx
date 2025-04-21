@@ -4,7 +4,7 @@ import Teams from '../components/Teams'
 import { ClubSlider } from '../components/ClubSlider'
 import { TaekwondoBenefits } from '../components/TaekwondoBenefits'
 import Description from '../components/Description'
-import Maps from '../components/Maps'
+
 import { Affiliation } from '../components/Affiliation'
 import { useRef } from 'react'
 
@@ -31,7 +31,7 @@ export const Home = () => {
       {/* <Teams /> */}
       <Teams />
       {/*  <Maps /> */}
-      <Maps lat={-17.38425} lng={-66.134955555556} />
+
       <ClubSlider ref={clubsSectionRef} />
       <TaekwondoBenefits />
       <Affiliation />
