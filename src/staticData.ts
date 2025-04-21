@@ -3,7 +3,7 @@ import { ClubInfo } from './types.d'
 export const antaraKwanInfo: ClubInfo = {
   id: 1,
   clubName: 'Antara Kwan',
-  foundationDate: 'January 31, 2022',
+  foundationDate: '31 de enero del 2022',
   headInstructorName: 'Amir Barra',
   description:
     'Antara Kwan es un club nuevo que nació con el propósito de formar, entrenar y cuidar la salud de las personas a través del hermoso arte del Taekwondo. Nuestro enfoque está en el desarrollo integral de cada practicante, promoviendo disciplina, respeto y bienestar físico. Buscamos construir una comunidad apasionada por este deporte, fomentando valores fundamentales en cada sesión de entrenamiento.',
@@ -20,20 +20,20 @@ export const antaraKwanInfo: ClubInfo = {
 
 export const lincesKwanInfo: ClubInfo = {
   id: 2,
-  clubName: 'Antara Kwan',
-  foundationDate: 'January 31, 2022',
-  headInstructorName: 'Amir Barra',
+  clubName: 'Academia de Taekwondo Linces',
+  foundationDate: '12 de marzo del 2012',
+  headInstructorName: 'Mauricio Campero',
   description:
-    'Antara Kwan es un club nuevo que nació con el propósito de formar, entrenar y cuidar la salud de las personas a través del hermoso arte del Taekwondo. Nuestro enfoque está en el desarrollo integral de cada practicante, promoviendo disciplina, respeto y bienestar físico. Buscamos construir una comunidad apasionada por este deporte, fomentando valores fundamentales en cada sesión de entrenamiento.',
+    'Academia deportiva de taekwondo olímpico que prioriza en la formación integral de nuestros alumnos. Inculcamos los valores en los que se basa el taekwondo: cortesía, integridad, perseverancia, autocontrol y espíritu indomable. Instructores altamente capacitados, avalados por la federación boliviana de taekwondo, con experiencia entrenando a selecciones municipales, departamentales y universitarias. La academia de taekwondo Linces ofrece cursos con distintos horarios para alumnos desde los 5 años instruidos con métodos de entrenamientos adecuados para ellos, hasta adultos que buscan ejercitarse e involucrarse en una disciplina deportiva marcial.',
   logoUrl:
-    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745194704/antara_pakbp8.png',
-  facebookLink: '',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745269782/logoLinces_z4a5jo.jpg',
+  facebookLink: 'https://www.facebook.com/linceskwan?locale=es_LA',
   whatsappContact:
-    'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
+    'https://api.whatsapp.com/send/?phone=76955278&text&type=phone_number&app_absent=0',
   images: [],
-  googleMapsLocation: 'https://maps.app.goo.gl/4hBkNEtxKHDtXjZ26',
+  googleMapsLocation: 'https://maps.app.goo.gl/B6F3p9ow7GbeBDhr5',
   instructorHistory:
-    'Soy cinturón negro 2do dan, múltiples veces campeón departamental y subcampeón nacional en diferentes eventos. Practico Taekwondo desde los 14 años y, como parte de mi proyecto de graduación universitaria, desarrollé una aplicación web para administrar campeonatos de Taekwondo, ayudando a muchos practicantes a mejorar su participación en competencias y su desarrollo deportivo.',
+    'Academia con 13 años de vida, afiliada a la asociación municipal de taekwondo Quillacollo, afiliada a la asociación departamental Cochabamba y a la federación boliviana de taekwondo WTB. Instructores altamente capacitados, avalados por la federación boliviana de taekwondo, con experiencia entrenando a selecciones municipales, departamentales y universitarias en sus distintas categorías y niveles.',
 }
 
 export const relampagosKwanInfo: ClubInfo = {

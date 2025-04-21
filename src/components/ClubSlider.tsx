@@ -8,9 +8,11 @@ import { ClubInfo } from '../types.d'
 import { clubs } from '../staticData'
 import { useNavigate } from 'react-router-dom'
 
-export const ClubSlider = () => {
+import { forwardRef } from 'react'
+
+export const ClubSlider = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <div className="flex justify-center">
+    <div ref={ref} className="flex justify-center">
       <Swiper
         modules={[Autoplay]}
         breakpoints={{
@@ -39,7 +41,7 @@ export const ClubSlider = () => {
       </Swiper>
     </div>
   )
-}
+})
 const ItemSlider = ({ club }: { club: ClubInfo }) => {
   const navigate = useNavigate()
 

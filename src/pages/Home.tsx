@@ -1,21 +1,30 @@
 import { Hero } from '../components/Hero'
-import heroImg from '../assets/hero-img.png'
+import logo from '../assets/logo.jpg'
 import Teams from '../components/Teams'
 import { ClubSlider } from '../components/ClubSlider'
 import { TaekwondoBenefits } from '../components/TaekwondoBenefits'
 import Description from '../components/Description'
 import Maps from '../components/Maps'
 import { Affiliation } from '../components/Affiliation'
+import { useRef } from 'react'
 
 export const Home = () => {
+  const clubsSectionRef = useRef<HTMLDivElement>(null)
+
+  const scrollToClubs = () => {
+    console.log('cliecked')
+    clubsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
       <Hero
-        image={heroImg}
+        image={logo}
         title={'Asociación Municipal de TaeKwonDo Quillacollo'}
         description={
-          'Afiliado a la Asociación Departamental de Taekwondo Cochabamba. Miembro de la Federación Boliviana de Taekwondo.'
+          'Creemos que el deporte es una escuela de vida. Promovemos la formación de campeones no solo en el tatami, sino también en la vida, cultivando valores como el respeto, la disciplina y la perseverancia. Trabajamos día a día para fomentar una vida sana, fortalecer el espíritu y construir un futuro lleno de oportunidades para nuestros jóvenes.'
         }
+        onScrollClick={scrollToClubs}
       />
       {/* <Description /> */}
       <Description />
@@ -23,7 +32,7 @@ export const Home = () => {
       <Teams />
       {/*  <Maps /> */}
       <Maps lat={-17.38425} lng={-66.134955555556} />
-      <ClubSlider />
+      <ClubSlider ref={clubsSectionRef} />
       <TaekwondoBenefits />
       <Affiliation />
     </>
