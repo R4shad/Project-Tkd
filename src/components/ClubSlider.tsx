@@ -5,17 +5,8 @@ import { Autoplay } from 'swiper/modules'
 import { IoLogoWhatsapp, IoLogoFacebook } from 'react-icons/io'
 import { ClubInfo } from '../types.d'
 
-import { antaraKwanInfo } from '../staticData'
-import { lincesKwanInfo } from '../staticData'
-import { relampagosKwanInfo } from '../staticData'
-import { aguilasKwanInfo } from '../staticData'
-
-const clubs: ClubInfo[] = [
-  antaraKwanInfo,
-  lincesKwanInfo,
-  relampagosKwanInfo,
-  aguilasKwanInfo,
-]
+import { clubs } from '../staticData'
+import { useNavigate } from 'react-router-dom'
 
 export const ClubSlider = () => {
   return (
@@ -50,8 +41,16 @@ export const ClubSlider = () => {
   )
 }
 const ItemSlider = ({ club }: { club: ClubInfo }) => {
+  const navigate = useNavigate()
+
+  const handleRedirect = () => {
+    navigate(`/club/${club.id}`)
+  }
   return (
-    <div className="flex flex-col items-center w-fit center place-self-center">
+    <div
+      className="flex flex-col items-center w-fit center place-self-center"
+      onClick={handleRedirect}
+    >
       <div className="w-50 h-50 rounded-full bg-gray-200 flex items-center justify-center shadow-lg">
         <img
           src={club.logoUrl}

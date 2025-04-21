@@ -1,4 +1,5 @@
 import { ClubInfo } from './types.d'
+
 export const antaraKwanInfo: ClubInfo = {
   id: 1,
   clubName: 'Antara Kwan',
@@ -66,3 +67,10 @@ export const aguilasKwanInfo: ClubInfo = {
   instructorHistory:
     'Soy cinturón negro 2do dan, múltiples veces campeón departamental y subcampeón nacional en diferentes eventos. Practico Taekwondo desde los 14 años y, como parte de mi proyecto de graduación universitaria, desarrollé una aplicación web para administrar campeonatos de Taekwondo, ayudando a muchos practicantes a mejorar su participación en competencias y su desarrollo deportivo.',
 }
+
+export const clubs: ClubInfo[] = [
+  antaraKwanInfo,
+  lincesKwanInfo,
+  relampagosKwanInfo,
+  aguilasKwanInfo,
+]

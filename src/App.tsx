@@ -13,7 +13,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:clubName" element={<Club />} />
+          <Route path="/club/:id" element={<Club />} />
           {/* 
             <Route
               path="/create"
