@@ -7,7 +7,8 @@ export const antaraKwanInfo: ClubInfo = {
   headInstructorName: 'Amir Barra',
   description:
     'Antara Kwan es un club nuevo que nació con el propósito de formar, entrenar y cuidar la salud de las personas a través del hermoso arte del Taekwondo. Nuestro enfoque está en el desarrollo integral de cada practicante, promoviendo disciplina, respeto y bienestar físico. Buscamos construir una comunidad apasionada por este deporte, fomentando valores fundamentales en cada sesión de entrenamiento.',
-  logoUrl: './../assets/antara.PNG',
+  logoUrl:
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745194704/antara_pakbp8.png',
   facebookLink: 'https://www.facebook.com/asoc.tkd.qllo?locale=es_LA',
   whatsappContact:
     'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
@@ -24,7 +25,8 @@ export const lincesKwanInfo: ClubInfo = {
   headInstructorName: 'Amir Barra',
   description:
     'Antara Kwan es un club nuevo que nació con el propósito de formar, entrenar y cuidar la salud de las personas a través del hermoso arte del Taekwondo. Nuestro enfoque está en el desarrollo integral de cada practicante, promoviendo disciplina, respeto y bienestar físico. Buscamos construir una comunidad apasionada por este deporte, fomentando valores fundamentales en cada sesión de entrenamiento.',
-  logoUrl: './../assets/antara.PNG',
+  logoUrl:
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745194704/antara_pakbp8.png',
   facebookLink: '',
   whatsappContact:
     'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
@@ -41,7 +43,8 @@ export const relampagosKwanInfo: ClubInfo = {
   headInstructorName: 'Amir Barra',
   description:
     'Antara Kwan es un club nuevo que nació con el propósito de formar, entrenar y cuidar la salud de las personas a través del hermoso arte del Taekwondo. Nuestro enfoque está en el desarrollo integral de cada practicante, promoviendo disciplina, respeto y bienestar físico. Buscamos construir una comunidad apasionada por este deporte, fomentando valores fundamentales en cada sesión de entrenamiento.',
-  logoUrl: './../assets/antara.PNG',
+  logoUrl:
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745194704/antara_pakbp8.png',
   facebookLink: '',
   whatsappContact:
     'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
@@ -58,7 +61,8 @@ export const aguilasKwanInfo: ClubInfo = {
   headInstructorName: 'Amir Barra',
   description:
     'Antara Kwan es un club nuevo que nació con el propósito de formar, entrenar y cuidar la salud de las personas a través del hermoso arte del Taekwondo. Nuestro enfoque está en el desarrollo integral de cada practicante, promoviendo disciplina, respeto y bienestar físico. Buscamos construir una comunidad apasionada por este deporte, fomentando valores fundamentales en cada sesión de entrenamiento.',
-  logoUrl: './../assets/antara.PNG',
+  logoUrl:
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745194704/antara_pakbp8.png',
   facebookLink: '',
   whatsappContact:
     'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
