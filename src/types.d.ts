@@ -8,6 +8,6 @@ export interface ClubInfo {
   facebookLink: string
   whatsappContact: string
   images: string[]
-  googleMapsLocation: string
+  googleMapsLocation: [number, number]
   instructorHistory: string
 }
