@@ -71,11 +71,9 @@ export const NewsForm: React.FC = () => {
           theme="snow"
           placeholder="Escribe el contenido de la noticia aquí..."
         />
-
-        {/* Botón de publicar */}
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-600 text-white rounded"
+          className=" text-custom-primary-color font-bold px-6 py-2 rounded-lg border-2  border-custom-primary-color hover:bg-black hover:text-white hover:border-black"
         >
           Publicar
         </button>

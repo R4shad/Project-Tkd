@@ -1,13 +1,19 @@
-import { useState } from 'react';
-import logo from '../assets/logo.jpg';
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import logo from '../assets/logo.jpg'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate()
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const handleLogoClick = () => {
+    navigate('/') // Esto te manda a la raíz
+  }
 
   return (
     <header className="bg-white shadow">
@@ -16,9 +22,10 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img
-              className="h-8 w-auto"
+              className="h-8 w-auto cursor-pointer" // Le agregué cursor-pointer para que se vea clickeable
               src={logo}
               alt="Logo"
+              onClick={handleLogoClick}
             />
           </div>
 
@@ -29,7 +36,7 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               <span className="sr-only">Abrir menú</span>
-            
+
               <svg
                 className="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,31 +55,34 @@ const Navbar = () => {
             </button>
           </div>
 
- 
           <div className="hidden md:flex md:items-center md:space-x-8">
-            <Link to={'/'} className="text-gray-900 hover:text-custom-primary-color">
+            <Link
+              to={'/'}
+              className="text-gray-900 hover:text-custom-primary-color"
+            >
               Clubes
             </Link>
-            <Link to={'/'} className="text-gray-900 hover:text-custom-primary-color">
+            <Link
+              to={'/'}
+              className="text-gray-900 hover:text-custom-primary-color"
+            >
               Posts
             </Link>
-            <Link to={'/'} className="text-gray-900 hover:text-custom-primary-color">
-            Acerca de
-           </Link>
-              
+            <Link
+              to={'/'}
+              className="text-gray-900 hover:text-custom-primary-color"
+            >
+              Acerca de
+            </Link>
           </div>
         </div>
       </div>
-
 
       <div
         className={`fixed inset-0 z-50 transform ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-300 ease-in-out`}
       >
-       
-
-
         <div className="fixed top-0 right-0 h-full w-3/4 bg-white shadow-lg">
           <div className="flex justify-end p-4">
             <button
@@ -99,7 +109,6 @@ const Navbar = () => {
             </button>
           </div>
 
-
           <div className="px-4 pt-2 pb-3 space-y-4">
             <a
               href="#"
@@ -123,7 +132,7 @@ const Navbar = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
