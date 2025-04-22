@@ -18,7 +18,7 @@ export const ClubDescription: React.FC<HeroProps> = ({
               {/* Asociación Municipal de TaeKwonDo Quillacollo */}
               {title}
             </h1>
-            <p className="text-custom-text-description text-lg">
+            <p className="text-custom-text-description text-lg text-justify">
               {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. */}
               {description}
             </p>
@@ -26,10 +26,10 @@ export const ClubDescription: React.FC<HeroProps> = ({
 
           <div className="flex justify-center md:justify-start space-x-4  ">
             <button className=" text-white font-bold px-6 py-2 rounded-lg border-2  border-custom-border  hover:bg-black hover:text-white hover:border-black">
-              Clubes Afiliados
+              Contáctenos
             </button>
             <button className="border border-custom-border text-white px-6 py-2 rounded-lg shadow-md  hover:bg-black hover:text-white hover:border-black">
-              Actividades
+              Conócenos Más
             </button>
           </div>
         </div>

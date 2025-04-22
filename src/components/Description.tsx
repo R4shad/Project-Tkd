@@ -3,7 +3,7 @@ import React from 'react'
 const Description: React.FC = () => {
   return (
     <section className="description">
-      <div className="  mx-auto  gap-5 p-6">
+      <div className="  mx-auto container gap-5 p-6">
         <div className=" flex justify-between flex-col md:flex-row items-center mb-15 md:mb-20 ">
           {/* Image */}
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
