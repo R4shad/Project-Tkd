@@ -1,9 +1,4 @@
-import {
-  FaFacebook,
-  FaFacebookSquare,
-  FaGithub,
-  FaLinkedin,
-} from 'react-icons/fa'
+import { FaFacebookSquare, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
