@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import { NewsForm } from './pages/NewsForm'
 import { Login } from './components/Login'
 import { Dashboard } from './pages/Dashboard'
+import { NewsView } from './pages/NewsView'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/news" element={<NewsForm />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/publication/:id" element={<NewsView />} />
           {/* 
             <Route
               path="/create"
