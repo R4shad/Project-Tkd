@@ -6,6 +6,7 @@ export const NewsForm: React.FC = () => {
   const [title, setTitle] = useState('')
   const [image, setImage] = useState<File | null>(null)
   const [imagePreview, setImagePreview] = useState<string | null>(null)
+
   const [content, setContent] = useState('')
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +30,6 @@ export const NewsForm: React.FC = () => {
       image,
       content,
     })
-    // Aquí enviarías todo al servidor
   }
 
   return (

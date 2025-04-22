@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo.jpg'
+import { login } from '../services/authServices'
 export const Login: React.FC = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -7,7 +8,19 @@ export const Login: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log({ email, password })
-    // Aquí puedes agregar la lógica para hacer login
+
+    try {
+      login(email, password)
+        .then((response) => {
+          console.log(response)
+          console.log('Login successful:', response)
+        })
+        .catch((error) => {
+          console.error('Login error:', error)
+        })
+    } catch (error) {
+      console.error('Error:', error)
+    }
   }
 
   return (
