@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { Club } from './pages/Club'
 import Footer from './components/Footer'
+import { NewsForm } from './pages/NewsForm'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/club/:id" element={<Club />} />
+          <Route path="/news" element={<NewsForm />} />
           {/* 
             <Route
               path="/create"
