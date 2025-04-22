@@ -1,8 +1,10 @@
+import { useState } from 'react';
+
 export interface CardProps {
-  image: string
-  title: string
-  description: string
-  name: string
+  image: string;
+  title: string;
+  description: string;
+  name: string;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -11,9 +13,11 @@ export const Card: React.FC<CardProps> = ({
   description,
   name,
 }) => {
+  const [expandirDescripcion, setExpandirDescripcion] = useState(false);
+
   return (
     <div className="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden">
-      <div className="relative w-full h-48 ">
+      <div className="relative w-full h-72">
         <img
           className="w-full h-full object-cover mt-4"
           src={image}
@@ -32,16 +36,36 @@ export const Card: React.FC<CardProps> = ({
         </svg>
       </div>
 
-      <div className="p-4">
-        <h2 className="text-xl font-bold text-gray-900">{title}</h2>
-        <p className="text-gray-600 mt-2">{description}</p>
+      <div className="pt-0 px-4 pb-2">
+        <h2 className="text-xl font-normal text-gray-900">{title}</h2>
+
+        <p
+          className={`text-gray-600 mt-2 text-sm transition-all ${
+            expandirDescripcion ? '' : 'line-clamp-4'
+          }`}
+        >
+          {description}
+        </p>
+
+        {/* Botón Leer más / Leer menos */}
+        {description.length > 200 && (
+          <button
+            onClick={() => setExpandirDescripcion(!expandirDescripcion)}
+            className="mt-1 text-blue-500 text-sm font-semibold hover:underline focus:outline-none"
+          >
+            {expandirDescripcion ? 'Leer menos' : 'Leer más'}
+          </button>
+        )}
       </div>
 
       <div className="px-4 pb-4">
-        <p className="text-sm text-gray-500 font-medium">{name}</p>
+        <p className="text-sm text-gray-500 font-medium line-clamp-5">
+          {name}
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
+
