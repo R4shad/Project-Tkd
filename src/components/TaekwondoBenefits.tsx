@@ -55,7 +55,7 @@ const benefitsOfTaekwondo: Benefit[] = [
 export const TaekwondoBenefits = () => {
   return (
     <>
-      <div className=" bg-custom-primary-color  pb-6 pt-12">
+      <div className=" bg-custom-primary-color  pb-6">
         <h2 className="text-center text-white pt-12 pb-12 text-2xl">
           Beneficios del Taekwondo
         </h2>
