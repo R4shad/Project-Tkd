@@ -7,7 +7,7 @@ interface HeroProps {
 export const ClubDescription: React.FC<HeroProps> = ({ club }) => {
   return (
     <section className="hero relative bg-[url('/src/assets/svg.png')] bg-cover bg-center">
-      <div className="pt-4 container mx-auto flex  pb-68 flex-col-reverse md:flex-row items-center justify-between px-6">
+      <div className="pt-8 container mx-auto flex  pb-68 flex-col-reverse md:flex-row items-center justify-between px-6">
         <div className="hero__container md:w-1/2 text-center md:text-left space-y-6">
           <div className="hero__info pb-4">
             <h1 className="md:text-5xl text-4xl font-light text-custom-text-title">
