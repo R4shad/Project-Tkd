@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-custom-primary-color text-gray-300 py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center pt-10 pb-4">
           <div>
             <h2 className="text-xl  text-white text-center">
               Asociación Municipal
@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
 
         {/* Línea divisoria */}
-        <div className=" border-t mt-2 pt-2 text-center text-sm">
+        <div className=" border-t mt-2  text-center text-sm py-6">
           © 2025 Asociación Municipal de Taekwondo Quillacollo. Todos los
           derechos reservados.
         </div>
