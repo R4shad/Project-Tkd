@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import logo from '../assets/logo.jpg'
 import { Link, useNavigate } from 'react-router-dom'
+import { useScroll } from '../hooks/useScroll'
 
 const Navbar = () => {
   const navigate = useNavigate()
-
+  const { setScrollTarget } = useScroll()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -13,6 +14,11 @@ const Navbar = () => {
 
   const handleLogoClick = () => {
     navigate('/') // Esto te manda a la raíz
+  }
+
+  const handleClubsClick = () => {
+    setScrollTarget('clubs')
+    navigate('/') // Ir al Home si no estás ahí
   }
 
   return (
@@ -56,12 +62,12 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex md:items-center md:space-x-8">
-            <Link
-              to={'/'}
+            <button
+              onClick={handleClubsClick}
               className="text-gray-900 hover:text-custom-primary-color"
             >
               Clubes
-            </Link>
+            </button>
             <Link
               to={'/'}
               className="text-gray-900 hover:text-custom-primary-color"

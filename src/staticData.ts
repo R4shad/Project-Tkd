@@ -44,34 +44,35 @@ export const lincesKwanInfo: ClubInfo = {
 
 export const relampagosKwanInfo: ClubInfo = {
   id: 3,
-  clubName: 'Antara Kwan',
+  clubName: 'Academia de Taekwondo Relampagos Kwan',
   foundationDate: 'January 31, 2022',
-  headInstructorName: 'Amir Barra',
+  headInstructorName: 'Erick Trujillo',
   description:
     'Antara Kwan es un club nuevo que nació con el propósito de formar, entrenar y cuidar la salud de las personas a través del hermoso arte del Taekwondo. Nuestro enfoque está en el desarrollo integral de cada practicante, promoviendo disciplina, respeto y bienestar físico. Buscamos construir una comunidad apasionada por este deporte, fomentando valores fundamentales en cada sesión de entrenamiento.',
   logoUrl:
-    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745194704/antara_pakbp8.png',
-  facebookLink: '',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745350124/r1_zhuo80.jpg',
+  facebookLink:
+    'https://www.facebook.com/profile.php?id=100063723433629&locale=es_LA',
   whatsappContact:
-    'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
+    'https://api.whatsapp.com/send/?phone=65725219&text&type=phone_number&app_absent=0',
   images: [],
-  googleMapsLocation: [-17.38980037698756, -66.28119982208774],
+  googleMapsLocation: [-17.39309902419564, -66.2619409338207],
   instructorHistory:
     'Soy cinturón negro 2do dan, múltiples veces campeón departamental y subcampeón nacional en diferentes eventos. Practico Taekwondo desde los 14 años y, como parte de mi proyecto de graduación universitaria, desarrollé una aplicación web para administrar campeonatos de Taekwondo, ayudando a muchos practicantes a mejorar su participación en competencias y su desarrollo deportivo.',
 }
 
 export const aguilasKwanInfo: ClubInfo = {
   id: 4,
-  clubName: 'Antara Kwan',
+  clubName: 'Academia de Taekwondo "Águilas Kwan"',
   foundationDate: 'January 31, 2022',
-  headInstructorName: 'Amir Barra',
+  headInstructorName: 'Henry Mercado',
   description:
     'Antara Kwan es un club nuevo que nació con el propósito de formar, entrenar y cuidar la salud de las personas a través del hermoso arte del Taekwondo. Nuestro enfoque está en el desarrollo integral de cada practicante, promoviendo disciplina, respeto y bienestar físico. Buscamos construir una comunidad apasionada por este deporte, fomentando valores fundamentales en cada sesión de entrenamiento.',
   logoUrl:
-    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745194704/antara_pakbp8.png',
-  facebookLink: '',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745350336/a1_esuuq9.jpg',
+  facebookLink: 'https://www.facebook.com/aguilaskwan?locale=es_LA',
   whatsappContact:
-    'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
+    'https://api.whatsapp.com/send/?phone=70351493&text&type=phone_number&app_absent=0',
   images: [
     'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286449/l5_hydl74.jpg',
     'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l3_cosxkd.jpg',

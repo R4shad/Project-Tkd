@@ -6,15 +6,25 @@ import { TaekwondoBenefits } from '../components/TaekwondoBenefits'
 import Description from '../components/Description'
 
 import { Affiliation } from '../components/Affiliation'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import { useScroll } from '../hooks/useScroll'
 
 export const Home = () => {
   const clubsSectionRef = useRef<HTMLDivElement>(null)
+
+  const { scrollTarget, setScrollTarget } = useScroll()
 
   const scrollToClubs = () => {
     console.log('cliecked')
     clubsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
+
+  useEffect(() => {
+    if (scrollTarget === 'clubs') {
+      clubsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+      setScrollTarget(null) // Limpias después de hacer el scroll
+    }
+  }, [scrollTarget, setScrollTarget])
 
   return (
     <>

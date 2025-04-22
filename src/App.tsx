@@ -8,18 +8,18 @@ import { NewsForm } from './pages/NewsForm'
 import { Login } from './components/Login'
 import { Dashboard } from './pages/Dashboard'
 import { NewsView } from './pages/NewsView'
+import { ScrollProvider } from './context/ScrollProvider'
 
 function App() {
   return (
-    <>
+    <ScrollProvider>
       <Router>
         <Navbar />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/club/:id" element={<Club />} />
           <Route path="/news" element={<NewsForm />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/admin/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/publication/:id" element={<NewsView />} />
           {/* 
@@ -34,7 +34,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </>
+    </ScrollProvider>
   )
 }
 
