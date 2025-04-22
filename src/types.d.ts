@@ -11,3 +11,10 @@ export interface ClubInfo {
   googleMapsLocation: [number, number]
   instructorHistory: string
 }
+
+export interface NewsItem {
+  id: number
+  title: string
+  content: string
+  imageUrl?: string
+}

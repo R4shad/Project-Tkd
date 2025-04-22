@@ -6,6 +6,7 @@ import { Club } from './pages/Club'
 import Footer from './components/Footer'
 import { NewsForm } from './pages/NewsForm'
 import { Login } from './components/Login'
+import { Dashboard } from './pages/Dashboard'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/club/:id" element={<Club />} />
           <Route path="/news" element={<NewsForm />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           {/* 
             <Route
               path="/create"
