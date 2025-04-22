@@ -12,34 +12,42 @@ import { forwardRef } from 'react'
 
 export const ClubSlider = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <div ref={ref} className="flex justify-center">
-      <Swiper
-        modules={[Autoplay]}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          640: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
-        loop={true}
-        autoplay={{
-          delay: 2000,
-        }}
-        speed={500}
-        effect="slide"
-      >
-        {clubs.map((club) => (
-          <SwiperSlide key={club.id} style={{ width: '220px' }}>
-            <ItemSlider club={club} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <section className="club-slider md:py-16 py-14 ">
+      <div className="section__title text-center md:mb-24 mb-14">
+                  <h2 className="text-black text-3xl md:text-4xl font-bold">
+                    Conoce nuestros clubes
+                  </h2>
+      </div>
+      <div ref={ref} className="flex justify-center">
+        <Swiper
+          modules={[Autoplay]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          loop={true}
+          autoplay={{
+            delay: 2000,
+          }}
+          speed={500}
+          effect="slide"
+        >
+          {clubs.map((club) => (
+            <SwiperSlide key={club.id} style={{ width: '220px' }}>
+              <ItemSlider club={club} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+
   )
 })
 const ItemSlider = ({ club }: { club: ClubInfo }) => {
