@@ -1,4 +1,4 @@
-import { ClubInfo } from '../types.d'
+import { ClubInfo } from '../../../types'
 
 interface HeroProps {
   club: ClubInfo

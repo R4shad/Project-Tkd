@@ -3,9 +3,9 @@ import 'swiper/swiper-bundle.css'
 
 import { Autoplay } from 'swiper/modules'
 import { IoLogoWhatsapp, IoLogoFacebook } from 'react-icons/io'
-import { ClubInfo } from '../types.d'
+import { ClubInfo } from '../../../types'
 
-import { clubs } from '../staticData'
+import { clubs } from '../../../staticData'
 import { useNavigate } from 'react-router-dom'
 
 import { forwardRef } from 'react'
@@ -14,9 +14,9 @@ export const ClubSlider = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <section className="club-slider md:py-16 py-14 ">
       <div className="section__title text-center md:mb-24 mb-14">
-                  <h2 className="text-black text-3xl md:text-4xl font-bold">
-                    Conoce nuestros clubes
-                  </h2>
+        <h2 className="text-black text-3xl md:text-4xl font-bold">
+          Conoce nuestros clubes
+        </h2>
       </div>
       <div ref={ref} className="flex justify-center">
         <Swiper
@@ -47,7 +47,6 @@ export const ClubSlider = forwardRef<HTMLDivElement>((_, ref) => {
         </Swiper>
       </div>
     </section>
-
   )
 })
 const ItemSlider = ({ club }: { club: ClubInfo }) => {

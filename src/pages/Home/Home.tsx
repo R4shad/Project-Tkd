@@ -1,13 +1,13 @@
-import { Hero } from '../components/Hero'
-import logo from '../assets/logo.jpg'
-import Teams from '../components/Teams'
-import { ClubSlider } from '../components/ClubSlider'
-import { TaekwondoBenefits } from '../components/TaekwondoBenefits'
-import Description from '../components/Description'
+import { Hero } from './Components/Hero'
+import logo from '../../assets/logo.jpg'
+import Teams from './Components/Teams'
+import { ClubSlider } from './Components/ClubSlider'
+import { TaekwondoBenefits } from './Components/TaekwondoBenefits'
+import Description from './Components/Description'
 
-import { Affiliation } from '../components/Affiliation'
+import { Affiliation } from './Components/Affiliation'
 import { useEffect, useRef } from 'react'
-import { useScroll } from '../hooks/useScroll'
+import { useScroll } from '../../hooks/useScroll'
 
 export const Home = () => {
   const clubsSectionRef = useRef<HTMLDivElement>(null)

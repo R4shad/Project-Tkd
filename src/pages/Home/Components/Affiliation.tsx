@@ -1,4 +1,4 @@
-import WTBimg from './../assets/FBTKD.jpg'
+import WTBimg from './../../../assets/FBTKD.jpg'
 
 export const Affiliation = () => {
   return (
@@ -16,20 +16,18 @@ export const Affiliation = () => {
 "
           />
         </div>
-        <div className='affiliation-text md:w-3xl'>
+        <div className="affiliation-text md:w-3xl">
           <p className="text-stone-950 text-lg mt-6 sm:text-sm pb-8 ">
-            La Federación Boliviana de Taekwondo es la organización rectora de este
-            arte marcial en Bolivia. Su misión es promover y desarrollar la práctica
-            del Taekwondo en el país, así como organizar competiciones y eventos
-            relacionados con este deporte. La federación trabaja en estrecha
-            colaboración con clubes, entrenadores y atletas para fomentar el
-            crecimiento y la excelencia en el Taekwondo a nivel nacional e
-            internacional.
+            La Federación Boliviana de Taekwondo es la organización rectora de
+            este arte marcial en Bolivia. Su misión es promover y desarrollar la
+            práctica del Taekwondo en el país, así como organizar competiciones
+            y eventos relacionados con este deporte. La federación trabaja en
+            estrecha colaboración con clubes, entrenadores y atletas para
+            fomentar el crecimiento y la excelencia en el Taekwondo a nivel
+            nacional e internacional.
           </p>
         </div>
-
       </div>
     </section>
-
   )
 }

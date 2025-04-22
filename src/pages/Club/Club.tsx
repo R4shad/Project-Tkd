@@ -1,10 +1,8 @@
-import ClubDescription from '../components/ClubDescription'
-import Maps from '../components/Maps'
-
-import { clubs } from '../staticData'
-
 import { useParams } from 'react-router-dom'
-import { ClubImages } from './../components/ClubImages'
+import { clubs } from '../../staticData'
+import ClubDescription from './Components/ClubDescription'
+import Maps from './Components/Maps'
+import { ClubImages } from './Components/ClubImages'
 
 export const Club = () => {
   const { id } = useParams<{ id: string }>()

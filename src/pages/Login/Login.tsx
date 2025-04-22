@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.jpg'
-import { login } from '../services/authServices'
+import logo from '../../assets/logo.jpg'
+import { login } from '../../services/authServices'
 export const Login: React.FC = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
