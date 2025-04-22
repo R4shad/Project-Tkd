@@ -13,7 +13,7 @@ export const antaraKwanInfo: ClubInfo = {
   whatsappContact:
     'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
   images: [],
-  googleMapsLocation: 'https://maps.app.goo.gl/4hBkNEtxKHDtXjZ26',
+  googleMapsLocation: [-17.38980037698756, -66.28119982208774],
   instructorHistory:
     'Soy cinturón negro 2do dan, múltiples veces campeón departamental y subcampeón nacional en diferentes eventos. Practico Taekwondo desde los 14 años y, como parte de mi proyecto de graduación universitaria, desarrollé una aplicación web para administrar campeonatos de Taekwondo, ayudando a muchos practicantes a mejorar su participación en competencias y su desarrollo deportivo.',
 }
@@ -30,10 +30,16 @@ export const lincesKwanInfo: ClubInfo = {
   facebookLink: 'https://www.facebook.com/linceskwan?locale=es_LA',
   whatsappContact:
     'https://api.whatsapp.com/send/?phone=76955278&text&type=phone_number&app_absent=0',
-  images: [],
-  googleMapsLocation: 'https://maps.app.goo.gl/B6F3p9ow7GbeBDhr5',
+  images: [
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286449/l5_hydl74.jpg',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l3_cosxkd.jpg',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l1_mzo1nn.jpg',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l2_no7sjw.jpg',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l4_ucyyms.jpg',
+  ],
+  googleMapsLocation: [-17.356146393304535, -66.29139046626327],
   instructorHistory:
-    'Academia con 13 años de vida, afiliada a la asociación municipal de taekwondo Quillacollo, afiliada a la asociación departamental Cochabamba y a la federación boliviana de taekwondo WTB. Instructores altamente capacitados, avalados por la federación boliviana de taekwondo, con experiencia entrenando a selecciones municipales, departamentales y universitarias en sus distintas categorías y niveles.',
+    'Academia con 13 años de vida, instructores altamente capacitados, avalados por la federación boliviana de taekwondo, con experiencia entrenando a selecciones municipales, departamentales y universitarias en sus distintas categorías y niveles.',
 }
 
 export const relampagosKwanInfo: ClubInfo = {
@@ -49,7 +55,7 @@ export const relampagosKwanInfo: ClubInfo = {
   whatsappContact:
     'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
   images: [],
-  googleMapsLocation: 'https://maps.app.goo.gl/4hBkNEtxKHDtXjZ26',
+  googleMapsLocation: [-17.38980037698756, -66.28119982208774],
   instructorHistory:
     'Soy cinturón negro 2do dan, múltiples veces campeón departamental y subcampeón nacional en diferentes eventos. Practico Taekwondo desde los 14 años y, como parte de mi proyecto de graduación universitaria, desarrollé una aplicación web para administrar campeonatos de Taekwondo, ayudando a muchos practicantes a mejorar su participación en competencias y su desarrollo deportivo.',
 }
@@ -66,8 +72,14 @@ export const aguilasKwanInfo: ClubInfo = {
   facebookLink: '',
   whatsappContact:
     'https://api.whatsapp.com/send/?phone=60794773&text&type=phone_number&app_absent=0',
-  images: [],
-  googleMapsLocation: 'https://maps.app.goo.gl/4hBkNEtxKHDtXjZ26',
+  images: [
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286449/l5_hydl74.jpg',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l3_cosxkd.jpg',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l1_mzo1nn.jpg',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l2_no7sjw.jpg',
+    'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l4_ucyyms.jpg',
+  ],
+  googleMapsLocation: [-17.38980037698756, -66.28119982208774],
   instructorHistory:
     'Soy cinturón negro 2do dan, múltiples veces campeón departamental y subcampeón nacional en diferentes eventos. Practico Taekwondo desde los 14 años y, como parte de mi proyecto de graduación universitaria, desarrollé una aplicación web para administrar campeonatos de Taekwondo, ayudando a muchos practicantes a mejorar su participación en competencias y su desarrollo deportivo.',
 }
