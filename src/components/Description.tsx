@@ -3,8 +3,13 @@ import React from 'react'
 const Description: React.FC = () => {
   return (
     <section className="description">
-      <div className="  mx-auto  gap-5 p-6">
-        <div className=" flex justify-between flex-col md:flex-row items-center mb-15 md:mb-20 ">
+      <div className="  mx-auto container gap-5 p-6">
+         <div className="section__title text-center md:mb-24 mb-14">
+                  <h2 className="text-black text-3xl md:text-4xl font-bold">
+                    Informacion Destacada de la Asociación Municipal de Taekwondo
+                  </h2>
+         </div>
+        <div className=" flex justify-between flex-col md:flex-row items-center mb-15 md:mb-20 md:gap-5 ">
           {/* Image */}
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
@@ -16,7 +21,7 @@ const Description: React.FC = () => {
 
           {/* Content */}
           <div className=" w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-2xl md:text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-4">
               Orgullo de Quillacollo: Talento que trasciende fronteras
             </h2>
             <p className="text-gray-600 mb-4">
@@ -31,7 +36,7 @@ const Description: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className=" flex flex-col justify-between md:flex-row-reverse items-center  mb-15 md:mb-20">
+        <div className=" flex flex-col justify-between md:flex-row-reverse items-center  mb-15 md:mb-20 md:gap-5">
           {/* Image */}
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
@@ -42,8 +47,8 @@ const Description: React.FC = () => {
           </div>
 
           {/* Content */}
-          <div className="description__content w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          <div className="description__content w-full md:w-1/2 text-center md:text-left ">
+            <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-4">
               Creciendo Juntos a Través del Deporte
             </h2>
             <p className="text-gray-600 mb-4">
