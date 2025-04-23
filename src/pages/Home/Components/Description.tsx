@@ -4,16 +4,16 @@ const Description: React.FC = () => {
   return (
     <section className="description">
       <div className="  mx-auto container gap-5 p-6">
-         <div className="section__title text-center md:mb-24 mb-14">
-                  <h2 className="text-black text-3xl md:text-4xl font-bold">
-                    Informacion Destacada de la Asociación Municipal de Taekwondo
-                  </h2>
-         </div>
+        <div className="section__title text-center md:mb-24 mb-14">
+          <h2 className="text-black text-3xl md:text-4xl font-bold">
+            Informacion Destacada de la Asociación Municipal de Taekwondo
+          </h2>
+        </div>
         <div className=" flex justify-between flex-col md:flex-row items-center mb-15 md:mb-20 md:gap-5 ">
           {/* Image */}
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
-              src="https://res.cloudinary.com/ddkjviwgt/image/upload/v1745271432/f6_q9jsvs.jpg"
+              src="https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/f6_q9jsvs.jpg"
               alt=""
               className="w-full h-auto rounded-lg shadow-lg"
             />
@@ -40,7 +40,7 @@ const Description: React.FC = () => {
           {/* Image */}
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
-              src="https://res.cloudinary.com/ddkjviwgt/image/upload/v1745272348/f5_jmnrwy.jpg"
+              src="https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/f5_jmnrwy.jpg"
               alt=""
               className="w-full h-auto rounded-lg shadow-lg"
             />
