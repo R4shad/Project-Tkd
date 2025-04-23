@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import Card, { CardProps } from './CardTeam'
+import Card, { CardProps } from './Card'
 import { useScroll } from '../../../hooks/useScroll'
 
 const listTeams: CardProps[] = [

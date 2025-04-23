@@ -52,7 +52,7 @@ const benefitsOfTaekwondo: Benefit[] = [
   },
 ]
 
-export const TaekwondoBenefits = () => {
+export const BenefitsSection = () => {
   return (
     <>
       <div className=" bg-custom-primary-color  pb-6">

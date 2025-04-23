@@ -5,7 +5,7 @@ interface HeroProps {
   onScrollClick: () => void
 }
 
-export const Hero: React.FC<HeroProps> = ({
+export const HeroSection: React.FC<HeroProps> = ({
   image,
   title,
   description,
@@ -48,4 +48,3 @@ export const Hero: React.FC<HeroProps> = ({
     </section>
   )
 }
-export default Hero

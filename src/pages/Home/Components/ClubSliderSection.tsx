@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { forwardRef } from 'react'
 
-export const ClubSlider = forwardRef<HTMLDivElement>((_, ref) => {
+export const ClubSliderSection = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <section className="club-slider md:py-16 py-14 ">
       <div className="section__title text-center md:mb-24 mb-14">

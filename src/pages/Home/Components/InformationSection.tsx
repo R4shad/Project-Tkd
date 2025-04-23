@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from './CardTeam'
-import { CardProps } from './CardTeam'
+import Card from './Card'
+import { CardProps } from './Card'
 
 const listTeams: CardProps[] = [
   {
@@ -29,7 +29,7 @@ const listTeams: CardProps[] = [
   },
 ]
 
-const Teams: React.FC = () => {
+export const InformationSection: React.FC = () => {
   return (
     <section className="team lg:py-16 ">
       <div className="container mx-auto px-6">
@@ -42,5 +42,3 @@ const Teams: React.FC = () => {
     </section>
   )
 }
-
-export default Teams

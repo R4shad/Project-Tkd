@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Description: React.FC = () => {
+export const DescriptionSection: React.FC = () => {
   return (
     <section className="description">
       <div className="  mx-auto container gap-5 p-6">
@@ -63,5 +63,3 @@ const Description: React.FC = () => {
     </section>
   )
 }
-
-export default Description
