@@ -44,7 +44,7 @@ export const ClubDescription: React.FC<HeroProps> = ({ club }) => {
           <img
             src={club.logoUrl}
             alt="Hero"
-            className="w-full max-w-md rounded-lg shadow-lg"
+            className="w-full max-w-md  rounded-full shadow-lg"
           />
         </div>
       </div>

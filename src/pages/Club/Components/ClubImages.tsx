@@ -4,7 +4,7 @@ export const ClubImages = ({ images }: { images: string[] }) => {
     <>
       <section className="px-4 py-16 text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-10">
-          Nuestra Ubicación
+          Nuestra Academia
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {images.slice(0, 3).map((img, idx) => (

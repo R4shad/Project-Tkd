@@ -9,11 +9,13 @@ import { Login } from './pages/Login/Login'
 import { Dashboard } from './pages/Dashboard/Dashboard'
 import { NewsView } from './pages/NewsView/NewsView'
 import { ScrollProvider } from './context/ScrollProvider'
+import { ScrollToTop } from './Shared/ScrollTop'
 
 function App() {
   return (
     <ScrollProvider>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

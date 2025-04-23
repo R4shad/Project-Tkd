@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from '../assets/logo.jpg'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useScroll } from '../hooks/useScroll'
 
 const Navbar = () => {
@@ -16,8 +16,17 @@ const Navbar = () => {
     navigate('/') // Esto te manda a la raíz
   }
 
+  const handlePostsCLick = () => {
+    navigate('/') // Esto te manda a la raíz
+  }
+
   const handleClubsClick = () => {
     setScrollTarget('clubs')
+    navigate('/') // Ir al Home si no estás ahí
+  }
+
+  const handleAboutCLick = () => {
+    setScrollTarget('about')
     navigate('/') // Ir al Home si no estás ahí
   }
 
@@ -68,18 +77,18 @@ const Navbar = () => {
             >
               Clubes
             </button>
-            <Link
-              to={'/'}
+            <button
+              onClick={handlePostsCLick}
               className="text-gray-900 hover:text-custom-primary-color"
             >
               Posts
-            </Link>
-            <Link
-              to={'/'}
+            </button>
+            <button
+              onClick={handleAboutCLick}
               className="text-gray-900 hover:text-custom-primary-color"
             >
               Acerca de
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -117,19 +126,19 @@ const Navbar = () => {
 
           <div className="px-4 pt-2 pb-3 space-y-4">
             <a
-              href="#"
+              onClick={handleClubsClick}
               className="block text-gray-900 hover:text-custom-primary-color"
             >
               Clubes
             </a>
             <a
-              href="#"
+              onClick={handlePostsCLick}
               className="block text-gray-900 hover:text-custom-primary-color"
             >
               Posts
             </a>
             <a
-              href="#"
+              onClick={handleAboutCLick}
               className="block text-gray-900 hover:text-custom-primary-color"
             >
               Acerca de

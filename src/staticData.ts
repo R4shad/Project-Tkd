@@ -50,7 +50,7 @@ export const relampagosKwanInfo: ClubInfo = {
   description:
     'Antara Kwan es un club nuevo que nació con el propósito de formar, entrenar y cuidar la salud de las personas a través del hermoso arte del Taekwondo. Nuestro enfoque está en el desarrollo integral de cada practicante, promoviendo disciplina, respeto y bienestar físico. Buscamos construir una comunidad apasionada por este deporte, fomentando valores fundamentales en cada sesión de entrenamiento.',
   logoUrl:
-    'https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/r1_zhuo80.jpg',
+    'https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/r1.jpg',
   facebookLink:
     'https://www.facebook.com/profile.php?id=100063723433629&locale=es_LA',
   whatsappContact:
