@@ -10,7 +10,6 @@ const Description: React.FC = () => {
           </h2>
         </div>
         <div className=" flex justify-between flex-col md:flex-row items-center mb-15 md:mb-20 md:gap-5 ">
-          {/* Image */}
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
               src="https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/f6_q9jsvs.jpg"
@@ -19,7 +18,6 @@ const Description: React.FC = () => {
             />
           </div>
 
-          {/* Content */}
           <div className=" w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-4">
               Orgullo de Quillacollo: Talento que trasciende fronteras
@@ -37,7 +35,6 @@ const Description: React.FC = () => {
           </div>
         </div>
         <div className=" flex flex-col justify-between md:flex-row-reverse items-center  mb-15 md:mb-20 md:gap-5">
-          {/* Image */}
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
               src="https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/f5_jmnrwy.jpg"
@@ -46,7 +43,6 @@ const Description: React.FC = () => {
             />
           </div>
 
-          {/* Content */}
           <div className="description__content w-full md:w-1/2 text-center md:text-left ">
             <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-4">
               Creciendo Juntos a Través del Deporte

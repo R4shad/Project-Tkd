@@ -17,11 +17,9 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="hero__container md:w-1/2 text-center md:text-left space-y-6">
           <div className="hero__info pb-4">
             <h1 className="md:text-5xl text-4xl font-light text-custom-text-title">
-              {/* Asociación Municipal de TaeKwonDo Quillacollo */}
               {title}
             </h1>
             <p className="text-custom-text-description text-lg">
-              {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. */}
               {description}
             </p>
           </div>

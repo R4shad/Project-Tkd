@@ -10,7 +10,7 @@ import { PiHeadCircuitFill } from 'react-icons/pi'
 interface Benefit {
   nombre: string
   descripcion: string
-  icon: JSX.Element // Aquí agregamos el campo `icon` para el ícono
+  icon: JSX.Element
 }
 
 const benefitsOfTaekwondo: Benefit[] = [
@@ -18,7 +18,7 @@ const benefitsOfTaekwondo: Benefit[] = [
     nombre: 'Mejora la condición física',
     descripcion:
       'El taekwondo ayuda a mejorar la fuerza, resistencia, flexibilidad y coordinación a través de ejercicios dinámicos y entrenamientos intensos.',
-    icon: <MdFitnessCenter />, // Icono relacionado con el beneficio
+    icon: <MdFitnessCenter />,
   },
   {
     nombre: 'Disciplina y autocontrol',

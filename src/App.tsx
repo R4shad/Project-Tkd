@@ -1,9 +1,9 @@
 import './App.css'
 import { Home } from './pages/Home/Home'
-import Navbar from './Shared/Navbar'
+import { Navbar } from './Shared/Navbar'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { Club } from './pages/Club/Club'
-import Footer from './Shared/Footer'
+import { Footer } from './Shared/Footer'
 import { NewsForm } from './pages/NewsForm/NewsForm'
 import { Login } from './pages/Login/Login'
 import { Dashboard } from './pages/Dashboard/Dashboard'
@@ -24,15 +24,6 @@ function App() {
           <Route path="/admin/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/publication/:id" element={<NewsView />} />
-          {/* 
-            <Route
-              path="/create"
-              element={<TaskForm createTask={createTask} editTask={editTask} />}
-            />
-            <Route
-              path="/edit/:id"
-              element={<TaskForm createTask={createTask} editTask={editTask} />}
-            /> */}
         </Routes>
         <Footer />
       </Router>

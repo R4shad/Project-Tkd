@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import logo from '../assets/logo.jpg'
+
 import { useNavigate } from 'react-router-dom'
 import { useScroll } from '../hooks/useScroll'
 
-const Navbar = () => {
+export const Navbar = () => {
   const navigate = useNavigate()
   const { setScrollTarget } = useScroll()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,33 +13,31 @@ const Navbar = () => {
   }
 
   const handleLogoClick = () => {
-    navigate('/') // Esto te manda a la raíz
+    navigate('/')
   }
 
   const handlePostsCLick = () => {
     setScrollTarget('posts')
-    navigate('/') // Esto te manda a la raíz
+    navigate('/')
   }
 
   const handleClubsClick = () => {
     setScrollTarget('clubs')
-    navigate('/') // Ir al Home si no estás ahí
+    navigate('/')
   }
 
   const handleAboutCLick = () => {
     setScrollTarget('about')
-    navigate('/') // Ir al Home si no estás ahí
+    navigate('/')
   }
 
   return (
     <header className="bg-white shadow">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img
-              className="h-8 w-auto cursor-pointer" // Le agregué cursor-pointer para que se vea clickeable
-              src={logo}
+              className="h-8 w-auto cursor-pointer"
               alt="Logo"
               onClick={handleLogoClick}
             />
@@ -150,5 +148,3 @@ const Navbar = () => {
     </header>
   )
 }
-
-export default Navbar

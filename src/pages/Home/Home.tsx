@@ -23,7 +23,7 @@ export const Home = () => {
   useEffect(() => {
     if (scrollTarget === 'clubs') {
       clubsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
-      setScrollTarget(null) // Limpias después de hacer el scroll
+      setScrollTarget(null)
     }
   }, [scrollTarget, setScrollTarget])
 
@@ -37,11 +37,10 @@ export const Home = () => {
         }
         onScrollClick={scrollToClubs}
       />
-      {/* <Description /> */}
+
       <Description />
-      {/* <Teams /> */}
+
       <Teams />
-      {/*  <Maps /> */}
 
       <ClubSlider ref={clubsSectionRef} />
       <TaekwondoBenefits />

@@ -2,14 +2,14 @@ import { FaFacebookSquare, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useScroll } from '../hooks/useScroll'
 import { useEffect, useRef } from 'react'
 
-const Footer = () => {
+export const Footer = () => {
   const aboutSectionRef = useRef<HTMLDivElement>(null)
   const { scrollTarget, setScrollTarget } = useScroll()
 
   useEffect(() => {
     if (scrollTarget === 'about') {
       aboutSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
-      setScrollTarget(null) // Limpias después de hacer el scroll
+      setScrollTarget(null)
     }
   }, [scrollTarget, setScrollTarget])
 
@@ -79,7 +79,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Línea divisoria */}
         <div className=" border-t mt-2  text-center text-sm py-6">
           © 2025 Asociación Municipal de Taekwondo Quillacollo. Todos los
           derechos reservados.
@@ -88,5 +87,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

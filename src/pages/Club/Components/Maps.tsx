@@ -45,7 +45,7 @@ const Maps: React.FC<MapSectionProps> = ({ lat, lng }) => {
 
         <div className="w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
           <iframe
-            key={`${selectedLocation.lat},${selectedLocation.lng}`} // 💥 Para forzar recarga si quieres
+            key={`${selectedLocation.lat},${selectedLocation.lng}`}
             className="w-full h-full"
             src={mapSrc}
             allowFullScreen

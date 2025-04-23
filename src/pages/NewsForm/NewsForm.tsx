@@ -5,7 +5,6 @@ import { NewsPostData } from '../../interfaces/types'
 import { createPost } from '../../services/postServices'
 import { createImage } from '../../services/postServices'
 
-
 export const NewsForm: React.FC = () => {
   const [title, setTitle] = useState('')
   const [image, setImage] = useState<File | null>(null)
@@ -18,7 +17,6 @@ export const NewsForm: React.FC = () => {
     if (file) {
       setImage(file)
 
-      // Crear una vista previa de la imagen
       const reader = new FileReader()
       reader.onloadend = () => {
         setImagePreview(reader.result as string)
@@ -29,17 +27,17 @@ export const NewsForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     const dataPost: NewsPostData = {
       title: title,
       image: '',
       content,
       date: new Date(),
     }
-    
+
     try {
-      if(image){
-        const {data,error} = await createImage(image)
+      if (image) {
+        const { data, error } = await createImage(image)
         if (error) {
           console.error('Error al subir la imagen:', error)
         } else {
@@ -47,15 +45,15 @@ export const NewsForm: React.FC = () => {
           dataPost.image = data?.path || ''
         }
       }
-      
+
       console.log('Imagen subida:', dataPost.image)
     } catch (error) {
       console.error('Error al subir la imagen', error)
     }
 
     try {
-      const {data,error} = await createPost(dataPost)
-      
+      const { data, error } = await createPost(dataPost)
+
       if (error) {
         console.error('Error al crear el post:', error)
       } else {
@@ -65,15 +63,14 @@ export const NewsForm: React.FC = () => {
     } catch (error) {
       console.error('Error al crear el post', error)
     }
-    console.log(dataPost, 'image:'+ image?.name) 
+    console.log(dataPost, 'image:' + image?.name)
   }
 
   return (
-    <section className='formNews my-24'>
+    <section className="formNews my-24">
       <div className="max-w-2xl mx-auto p-4 text-center">
         <h2 className="text-2xl font-bold mb-4">Crear Nueva Noticia</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          {/* Título */}
           <input
             type="text"
             placeholder="Titular de la noticia"
@@ -83,7 +80,6 @@ export const NewsForm: React.FC = () => {
             required
           />
 
-          {/* Imagen */}
           <input
             type="file"
             accept="image/*"
@@ -92,7 +88,6 @@ export const NewsForm: React.FC = () => {
             required
           />
 
-          {/* Preview de imagen */}
           {imagePreview && (
             <img
               src={imagePreview}
@@ -101,7 +96,6 @@ export const NewsForm: React.FC = () => {
             />
           )}
 
-          {/* Contenido */}
           <ReactQuill
             value={content}
             onChange={setContent}
@@ -117,6 +111,5 @@ export const NewsForm: React.FC = () => {
         </form>
       </div>
     </section>
-
   )
 }

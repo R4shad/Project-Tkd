@@ -53,23 +53,18 @@ export const NewsView: React.FC = () => {
       </Helmet>
 
       <div className="max-w-7xl mx-auto p-4 flex flex-col gap-8">
-        {/* Título principal */}
         <h2 className="text-black text-3xl md:text-4xl font-bold text-center">
           {news.title}
         </h2>
 
-        {/* Contenido dividido */}
         <div className="flex flex-col md:flex-row gap-8">
-          {/* Izquierda: Noticia principal */}
           <div className="md:w-2/3 flex flex-col gap-6">
-            {/* Imagen */}
             <img
               src={news.imageUrl}
               alt={news.title}
               className="rounded-lg w-full object-cover"
             />
 
-            {/* Fecha */}
             <p className="text-gray-500 text-sm">
               {new Date(news.date).toLocaleDateString('es-ES', {
                 year: 'numeric',
@@ -78,13 +73,11 @@ export const NewsView: React.FC = () => {
               })}
             </p>
 
-            {/* Contenido */}
             <div
               className="text-gray-700 leading-relaxed text-lg"
               dangerouslySetInnerHTML={{ __html: news.content }}
             />
 
-            {/* Botones para compartir */}
             <div className="flex items-center gap-6 mt-6">
               <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
@@ -118,7 +111,6 @@ export const NewsView: React.FC = () => {
             </div>
           </div>
 
-          {/* Derecha: Noticias relacionadas */}
           <div className="md:w-1/3 flex flex-col gap-6">
             <h2 className="text-2xl font-semibold mb-2">Más noticias</h2>
             <div className="space-y-6">
