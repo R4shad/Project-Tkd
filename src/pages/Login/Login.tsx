@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import logo from '../../assets/logo.jpg'
 import { login } from '../../services/authServices'
+
+import { IoMdAlert } from 'react-icons/io'
 export const Login: React.FC = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const [error, setError] = useState('')
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -13,7 +17,12 @@ export const Login: React.FC = () => {
       login(email, password)
         .then((response) => {
           console.log(response)
-          console.log('Login successful:', response)
+          if (response.data.user === null) {
+            setError('Datos incorrectos')
+          } else {
+            setError('')
+            window.location.href = '/dashboard'
+          }
         })
         .catch((error) => {
           console.error('Login error:', error)
@@ -51,7 +60,14 @@ export const Login: React.FC = () => {
             className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
             required
           />
+          {error && (
+            <div className="text-red-500 text-center mb-4 flex items-center justify-center gap-2">
+              {error}
+              <IoMdAlert></IoMdAlert>
+            </div>
+          )}
 
+          {/* Submit Button */}
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200"
