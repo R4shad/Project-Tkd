@@ -8,6 +8,7 @@ import Description from './Components/Description'
 import { Affiliation } from './Components/Affiliation'
 import { useEffect, useRef } from 'react'
 import { useScroll } from '../../hooks/useScroll'
+import { PostSection } from './Components/PostSection'
 
 export const Home = () => {
   const clubsSectionRef = useRef<HTMLDivElement>(null)
@@ -44,6 +45,7 @@ export const Home = () => {
 
       <ClubSlider ref={clubsSectionRef} />
       <TaekwondoBenefits />
+      <PostSection />
       <Affiliation />
     </>
   )

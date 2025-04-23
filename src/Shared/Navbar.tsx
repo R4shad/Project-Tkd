@@ -17,6 +17,7 @@ const Navbar = () => {
   }
 
   const handlePostsCLick = () => {
+    setScrollTarget('posts')
     navigate('/') // Esto te manda a la raíz
   }
 
