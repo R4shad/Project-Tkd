@@ -18,6 +18,13 @@ export const deletePost = async (id: string) => {
       .eq('id', id)
     return {data, error}
 }
+//Select a post from the database
+export const getPosts = async () =>{
+    const { data, error } = await supabaseClient
+      .from('posts')
+      .select('*')
+    return {data, error}
+}
 
 //create a new image in the storage
 export const createImage = async (file: File) => {

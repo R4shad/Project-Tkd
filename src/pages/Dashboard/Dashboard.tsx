@@ -1,37 +1,58 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { NewsPostData } from '../../interfaces/types'
+import { getPosts } from '../../services/postServices'
+import { deletePost } from '../../services/postServices'
+import toast from 'react-hot-toast'
 
-interface NewsItem {
-  id: number
-  title: string
-  content: string
-  imageUrl?: string
-  date: string
-}
+
 
 export const Dashboard: React.FC = () => {
-  const [newsList, setNewsList] = useState<NewsItem[]>([
+  const [newsList, setNewsList] = useState<NewsPostData[]>([
     {
-      id: 1,
+      id: "1",
       title: 'Niño de Pando gana la Copa Master',
-      content: `<p>Fue el único taekwondista de Pando participante en la Copa Master Internacional, que concluyó el sábado en el poligimnasio Santa Rosita y que contó con más de 400 participantes.</p><p>Llegar a Santa Cruz fue un doble esfuerzo para Fabiano Ribera Rojas, de 8 años, y su padre y entrenador, Josemar Rojas Montero.</p><p>Por todo ello, la celebración del título en la categoría pre-infantil hasta 45 kilos fue a todo pulmón entre Fabiano y Josemar.</p>`,
+      description: `<p>Fue el único taekwondista de Pando participante en la Copa Master Internacional, que concluyó el sábado en el poligimnasio Santa Rosita y que contó con más de 400 participantes.</p><p>Llegar a Santa Cruz fue un doble esfuerzo para Fabiano Ribera Rojas, de 8 años, y su padre y entrenador, Josemar Rojas Montero.</p><p>Por todo ello, la celebración del título en la categoría pre-infantil hasta 45 kilos fue a todo pulmón entre Fabiano y Josemar.</p>`,
       imageUrl:
         'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l2_no7sjw.jpg',
-      date: '2025-04-20',
+      datePost: '2025-04-20',
     },
-    {
-      id: 2,
-      title: 'Otra Noticia',
-      content: `<p>Esta es otra noticia con contenido formateado.</p>`,
-      date: '2025-04-21',
-    },
+   
   ])
+   useEffect(() => {
+    const getDataPost = async () => {
+      const { data, error } = await getPosts()
+      if (error) {
+        console.error('Error al obtener los posts:', error)
+      } else {
+        if(data){
+          setNewsList(data)
+        }else{
+          console.error('No se encontraron posts')
+          toast.error('No se encontraron posts')
+        }
+      }
+    }
+    getDataPost()
+  },[])
+   
 
-  const handleDelete = (id: number) => {
+  const handleDelete = (id: string) => {
     const confirmDelete = window.confirm(
       '¿Estás seguro de que quieres eliminar esta noticia?'
     )
     if (confirmDelete) {
       setNewsList(newsList.filter((news) => news.id !== id))
+      deletePostData(id)
+    }
+  }
+  const deletePostData = async (id:string) => {
+    const { data, error } = await deletePost(id)
+    if (error) {
+      console.error('Error al eliminar el post:', error)
+    } else {
+      console.log('Post eliminado con éxito:', data)
+      toast.success('Post eliminado con éxito')
+     
     }
   }
 
@@ -61,21 +82,17 @@ export const Dashboard: React.FC = () => {
                 <div className="text-left flex-1">
                   <h3 className="text-lg font-semibold">{news.title}</h3>
                   <p className="text-sm text-gray-400">
-                    {new Date(news.date).toLocaleDateString('es-ES', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
+                    { news.datePost}
                   </p>
 
                   <div
                     className="text-gray-600 text-sm mt-2 line-clamp-3"
-                    dangerouslySetInnerHTML={{ __html: news.content }}
+                    dangerouslySetInnerHTML={{ __html: news.description }}
                   />
                 </div>
               </div>
               <button
-                onClick={() => handleDelete(news.id)}
+                onClick={() => handleDelete(news.id ?? '')}
                 className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold w-full md:w-auto"
               >
                 Eliminar
