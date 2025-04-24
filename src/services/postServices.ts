@@ -21,11 +21,24 @@ export const deletePost = async (id: string) => {
 
 //create a new image in the storage
 export const createImage = async (file: File) => {
-    const { data, error } = await supabaseClient.storage
-      .from('images')
-      .upload(`posts/${file.name}`, file, {
-        cacheControl: '3600',
-        upsert: false,
-      })
-    return {data, error}
-}   
+  const filePath = `posts/${file.name}`;
+
+  const { data, error } = await supabaseClient.storage
+    .from('tkdqllo')
+    .upload(filePath, file, {
+      cacheControl: '3600',
+      upsert: false,
+    });
+
+  if (error) {
+    return { error, publicUrl: null };
+  }
+
+  // Obtener la URL pública
+  const { data: publicUrlData } = supabaseClient.storage
+    .from('tkdqllo')
+    .getPublicUrl(filePath);
+
+  return { data,publicUrl: publicUrlData.publicUrl,error };
+};
+  

@@ -2,8 +2,8 @@
 
 export interface NewsPostData{
     title: string
-    image: string
-    content: string
-    date: Date
+    imageUrl: string
+    description: string
+    datePost: string
 }
     

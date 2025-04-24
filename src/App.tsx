@@ -9,10 +9,11 @@ import { Login } from './pages/Login/Login'
 import { Dashboard } from './pages/Dashboard/Dashboard'
 import { NewsView } from './pages/NewsView/NewsView'
 import { ScrollProvider } from './context/ScrollProvider'
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
-    <ScrollProvider>
+    <><Toaster position="top-right" /><ScrollProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -22,19 +23,19 @@ function App() {
           <Route path="/admin/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/publication/:id" element={<NewsView />} />
-          {/* 
-            <Route
-              path="/create"
-              element={<TaskForm createTask={createTask} editTask={editTask} />}
-            />
-            <Route
-              path="/edit/:id"
-              element={<TaskForm createTask={createTask} editTask={editTask} />}
-            /> */}
+          {/*
+      <Route
+        path="/create"
+        element={<TaskForm createTask={createTask} editTask={editTask} />}
+      />
+      <Route
+        path="/edit/:id"
+        element={<TaskForm createTask={createTask} editTask={editTask} />}
+      /> */}
         </Routes>
         <Footer />
       </Router>
-    </ScrollProvider>
+    </ScrollProvider></>
   )
 }
 
