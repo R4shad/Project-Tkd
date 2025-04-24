@@ -59,8 +59,6 @@ export const NewsForm: React.FC = () => {
     try {
       const { data, error } = await createPost(dataPost)
 
-      const { data, error } = await createPost(dataPost)
-
       if (error) {
         console.error('Error al crear el post:', error)
         toast.error('Error al crear el post')
