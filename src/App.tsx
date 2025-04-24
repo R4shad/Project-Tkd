@@ -25,15 +25,6 @@ function App() {
           <Route path="/admin/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/publication/:id" element={<NewsView />} />
-          {/* 
-            <Route
-              path="/create"
-              element={<TaskForm createTask={createTask} editTask={editTask} />}
-            />
-            <Route
-              path="/edit/:id"
-              element={<TaskForm createTask={createTask} editTask={editTask} />}
-            /> */}
         </Routes>
         <Footer />
       </Router>
