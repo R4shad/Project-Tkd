@@ -9,7 +9,7 @@ export const DescriptionSection: React.FC = () => {
             Informacion Destacada de la Asociación Municipal de Taekwondo
           </h2>
         </div>
-        <div className=" flex justify-between flex-col md:flex-row items-center mb-15 md:mb-20 md:gap-5 ">
+        <div className=" flex justify-between flex-col md:flex-row items-center mb-5 md:mb-20 md:gap-5 ">
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
               src="https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/f6_q9jsvs.jpg"
@@ -34,7 +34,7 @@ export const DescriptionSection: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className=" flex flex-col justify-between md:flex-row-reverse items-center  mb-15 md:mb-20 md:gap-5">
+        <div className=" flex flex-col justify-between md:flex-row-reverse items-center  mb-5 md:mb-20 md:gap-5">
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
               src="https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/f5_jmnrwy.jpg"

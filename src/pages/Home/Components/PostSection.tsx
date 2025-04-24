@@ -43,7 +43,7 @@ export const PostSection = () => {
   return (
     <section ref={postSectionRef} className="team lg:py-16 ">
       <div className="container mx-auto px-6">
-        <h2 className="text-black text-3xl md:text-4xl font-bold text-center mb-14">
+        <h2 className="text-black text-3xl md:text-4xl font-bold text-center mb-6 mt-10">
           Publicaciones Recientes
         </h2>
         <div className="team__cards flex flex-wrap justify-center gap-6">

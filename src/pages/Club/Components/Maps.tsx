@@ -20,7 +20,7 @@ const Maps: React.FC<MapSectionProps> = ({ lat, lng }) => {
     setSelectedLocation(locations[locationName])
   }
 
-  const mapSrc = `https://www.google.com/maps?q=${selectedLocation.lat},${selectedLocation.lng}&hl=es&z=14&output=embed`
+  const mapSrc = `https://www.google.com/maps?q=${selectedLocation.lat},${selectedLocation.lng}&hl=es&z=16&output=embed`
 
   return (
     <section className="map-section py-12 px-4 sm:px-6 lg:px-8 text-center">
@@ -30,7 +30,8 @@ const Maps: React.FC<MapSectionProps> = ({ lat, lng }) => {
         </h2>
 
         {lat === -17.356146393304535 && (
-          <div className="mb-6">
+          <div className="mb-6 flex justify-end  items-center gap-8">
+            <p>Elige una sucursal: </p>
             <select
               onChange={handleLocationChange}
               className="border rounded-lg p-2 text-gray-700"

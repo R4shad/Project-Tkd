@@ -1,5 +1,6 @@
 import { ClubInfo } from '../../../types'
-
+import { FaFacebook } from 'react-icons/fa'
+import { IoLogoWhatsapp } from 'react-icons/io'
 interface HeroProps {
   club: ClubInfo
 }
@@ -18,14 +19,14 @@ export const ClubDescription: React.FC<HeroProps> = ({ club }) => {
             </p>
           </div>
 
-          <div className="flex justify-center md:justify-start space-x-4  ">
+          <div className="flex justify-center md:justify-start space-x-4">
             <a
               href={club.whatsappContact}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className=" text-white font-bold px-6 py-2 rounded-lg border-2  border-custom-border  hover:bg-black hover:text-white hover:border-black">
-                Contáctenos
+              <button className="text-white font-bold px-3 py-2 rounded-lg border-2  border-custom-border  hover:bg-black hover:text-white hover:border-black w-50 flex items-center justify-center gap-2">
+                Contáctenos <IoLogoWhatsapp />
               </button>
             </a>
             <a
@@ -33,8 +34,8 @@ export const ClubDescription: React.FC<HeroProps> = ({ club }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="border border-custom-border text-white px-6 py-2 rounded-lg shadow-md  hover:bg-black hover:text-white hover:border-black">
-                Conócenos Más
+              <button className="border border-custom-border text-white px-3 py-2 rounded-lg shadow-md  hover:bg-black hover:text-white hover:border-black w-50 flex items-center justify-center gap-2">
+                Conócenos Más <FaFacebook />
               </button>
             </a>
           </div>

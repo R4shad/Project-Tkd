@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { useNavigate } from 'react-router-dom'
 import { useScroll } from '../hooks/useScroll'
-
+import logo from './../assets/logo.jpg'
 export const Navbar = () => {
   const navigate = useNavigate()
   const { setScrollTarget } = useScroll()
@@ -39,6 +39,7 @@ export const Navbar = () => {
             <img
               className="h-8 w-auto cursor-pointer"
               alt="Logo"
+              src={logo}
               onClick={handleLogoClick}
             />
           </div>
