@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { useNavigate } from 'react-router-dom'
 import { useScroll } from '../hooks/useScroll'
-import logo from './../assets/logo.jpg'
+import logo from '../assets/logo.jpg'
 export const Navbar = () => {
   const navigate = useNavigate()
   const { setScrollTarget } = useScroll()
