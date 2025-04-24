@@ -1,6 +1,6 @@
 import WTBimg from './../../../assets/FBTKD.jpg'
 
-export const Affiliation = () => {
+export const AffiliationSection = () => {
   return (
     <section className="affiliation  py-14 md:py-28">
       <div className="flex flex-col items-center  text-center px-4 md:px-16">

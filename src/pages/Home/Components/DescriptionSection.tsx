@@ -1,25 +1,23 @@
 import React from 'react'
 
-const Description: React.FC = () => {
+export const DescriptionSection: React.FC = () => {
   return (
     <section className="description">
       <div className="  mx-auto container gap-5 p-6">
-         <div className="section__title text-center md:mb-24 mb-14">
-                  <h2 className="text-black text-3xl md:text-4xl font-bold">
-                    Informacion Destacada de la Asociación Municipal de Taekwondo
-                  </h2>
-         </div>
-        <div className=" flex justify-between flex-col md:flex-row items-center mb-15 md:mb-20 md:gap-5 ">
-          {/* Image */}
+        <div className="section__title text-center md:mb-24 mb-14">
+          <h2 className="text-black text-3xl md:text-4xl font-bold">
+            Informacion Destacada de la Asociación Municipal de Taekwondo
+          </h2>
+        </div>
+        <div className=" flex justify-between flex-col md:flex-row items-center mb-5 md:mb-20 md:gap-5 ">
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
-              src="https://res.cloudinary.com/ddkjviwgt/image/upload/v1745271432/f6_q9jsvs.jpg"
+              src="https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/f6_q9jsvs.jpg"
               alt=""
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
 
-          {/* Content */}
           <div className=" w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-4">
               Orgullo de Quillacollo: Talento que trasciende fronteras
@@ -36,17 +34,15 @@ const Description: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className=" flex flex-col justify-between md:flex-row-reverse items-center  mb-15 md:mb-20 md:gap-5">
-          {/* Image */}
+        <div className=" flex flex-col justify-between md:flex-row-reverse items-center  mb-5 md:mb-20 md:gap-5">
           <div className="description__image mb-5 md:mb-0  md:w-md w-64">
             <img
-              src="https://res.cloudinary.com/ddkjviwgt/image/upload/v1745272348/f5_jmnrwy.jpg"
+              src="https://wwgxztrtjxckhgasxbrf.supabase.co/storage/v1/object/public/tkdqllo/StaticData/f5_jmnrwy.jpg"
               alt=""
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
 
-          {/* Content */}
           <div className="description__content w-full md:w-1/2 text-center md:text-left ">
             <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-4">
               Creciendo Juntos a Través del Deporte
@@ -67,5 +63,3 @@ const Description: React.FC = () => {
     </section>
   )
 }
-
-export default Description

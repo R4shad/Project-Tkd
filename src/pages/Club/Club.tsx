@@ -20,7 +20,7 @@ export const Club = () => {
       <section className="description">
         <div className="  mx-auto container gap-5 p-6">
           <div className="flex justify-center  mb-8 ">
-            <div className="description__content w-1/2  text-center ">
+            <div className="description__content   text-center ">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 {club.headInstructorName}
               </h2>

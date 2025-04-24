@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 export interface CardProps {
-  image: string;
-  title: string;
-  description: string;
-  name: string;
+  image: string
+  title: string
+  description: string
+  name: string
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -13,7 +13,7 @@ export const Card: React.FC<CardProps> = ({
   description,
   name,
 }) => {
-  const [expandirDescripcion, setExpandirDescripcion] = useState(false);
+  const [expandirDescripcion, setExpandirDescripcion] = useState(false)
 
   return (
     <div className="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden">
@@ -47,7 +47,6 @@ export const Card: React.FC<CardProps> = ({
           {description}
         </p>
 
-        {/* Botón Leer más / Leer menos */}
         {description.length > 200 && (
           <button
             onClick={() => setExpandirDescripcion(!expandirDescripcion)}
@@ -59,13 +58,10 @@ export const Card: React.FC<CardProps> = ({
       </div>
 
       <div className="px-4 pb-4">
-        <p className="text-sm text-gray-500 font-medium line-clamp-5">
-          {name}
-        </p>
+        <p className="text-sm text-gray-500 font-medium line-clamp-5">{name}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
-
+export default Card

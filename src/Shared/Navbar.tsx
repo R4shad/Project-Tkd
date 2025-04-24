@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import logo from '../assets/logo.jpg'
-import { Link, useNavigate } from 'react-router-dom'
-import { useScroll } from '../hooks/useScroll'
 
-const Navbar = () => {
+import { useNavigate } from 'react-router-dom'
+import { useScroll } from '../hooks/useScroll'
+import logo from '../assets/logo.jpg'
+export const Navbar = () => {
   const navigate = useNavigate()
   const { setScrollTarget } = useScroll()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,24 +13,33 @@ const Navbar = () => {
   }
 
   const handleLogoClick = () => {
-    navigate('/') // Esto te manda a la raíz
+    navigate('/')
+  }
+
+  const handlePostsCLick = () => {
+    setScrollTarget('posts')
+    navigate('/')
   }
 
   const handleClubsClick = () => {
     setScrollTarget('clubs')
-    navigate('/') // Ir al Home si no estás ahí
+    navigate('/')
+  }
+
+  const handleAboutCLick = () => {
+    setScrollTarget('about')
+    navigate('/')
   }
 
   return (
     <header className="bg-white shadow">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img
-              className="h-8 w-auto cursor-pointer" // Le agregué cursor-pointer para que se vea clickeable
-              src={logo}
+              className="h-8 w-auto cursor-pointer"
               alt="Logo"
+              src={logo}
               onClick={handleLogoClick}
             />
           </div>
@@ -68,18 +77,18 @@ const Navbar = () => {
             >
               Clubes
             </button>
-            <Link
-              to={'/'}
+            <button
+              onClick={handlePostsCLick}
               className="text-gray-900 hover:text-custom-primary-color"
             >
               Posts
-            </Link>
-            <Link
-              to={'/'}
+            </button>
+            <button
+              onClick={handleAboutCLick}
               className="text-gray-900 hover:text-custom-primary-color"
             >
               Acerca de
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -117,19 +126,19 @@ const Navbar = () => {
 
           <div className="px-4 pt-2 pb-3 space-y-4">
             <a
-              href="#"
+              onClick={handleClubsClick}
               className="block text-gray-900 hover:text-custom-primary-color"
             >
               Clubes
             </a>
             <a
-              href="#"
+              onClick={handlePostsCLick}
               className="block text-gray-900 hover:text-custom-primary-color"
             >
               Posts
             </a>
             <a
-              href="#"
+              onClick={handleAboutCLick}
               className="block text-gray-900 hover:text-custom-primary-color"
             >
               Acerca de
@@ -140,5 +149,3 @@ const Navbar = () => {
     </header>
   )
 }
-
-export default Navbar

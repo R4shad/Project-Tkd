@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 interface NewsItem {
   id: number
   title: string
-  content: string // Contenido HTML
+  content: string
   imageUrl?: string
-  date: string // Ahora tiene fecha también
+  date: string
 }
 
 export const Dashboard: React.FC = () => {
@@ -16,7 +16,7 @@ export const Dashboard: React.FC = () => {
       content: `<p>Fue el único taekwondista de Pando participante en la Copa Master Internacional, que concluyó el sábado en el poligimnasio Santa Rosita y que contó con más de 400 participantes.</p><p>Llegar a Santa Cruz fue un doble esfuerzo para Fabiano Ribera Rojas, de 8 años, y su padre y entrenador, Josemar Rojas Montero.</p><p>Por todo ello, la celebración del título en la categoría pre-infantil hasta 45 kilos fue a todo pulmón entre Fabiano y Josemar.</p>`,
       imageUrl:
         'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l2_no7sjw.jpg',
-      date: '2025-04-20', // fecha en formato ISO
+      date: '2025-04-20',
     },
     {
       id: 2,

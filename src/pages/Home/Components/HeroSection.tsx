@@ -5,23 +5,21 @@ interface HeroProps {
   onScrollClick: () => void
 }
 
-export const Hero: React.FC<HeroProps> = ({
+export const HeroSection: React.FC<HeroProps> = ({
   image,
   title,
   description,
   onScrollClick,
 }) => {
   return (
-    <section className="hero py-12 relative bg-[url('/src/assets/svg.png')] bg-cover bg-center">
+    <section className="hero py-12 relative bg-[url('/src/assets/svg.png')] bg-cover bg-center min-h-[1300px] sm:min-h-[900px] md:min-h-[700px]">
       <div className="container mx-auto flex pb-48 flex-col-reverse md:flex-row items-center justify-between px-6">
         <div className="hero__container md:w-1/2 text-center md:text-left space-y-6">
           <div className="hero__info pb-4">
             <h1 className="md:text-5xl text-4xl font-light text-custom-text-title">
-              {/* Asociación Municipal de TaeKwonDo Quillacollo */}
               {title}
             </h1>
-            <p className="text-custom-text-description text-lg">
-              {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. */}
+            <p className="text-custom-text-description text-lg pt-4">
               {description}
             </p>
           </div>
@@ -50,4 +48,3 @@ export const Hero: React.FC<HeroProps> = ({
     </section>
   )
 }
-export default Hero

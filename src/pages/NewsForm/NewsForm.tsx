@@ -6,7 +6,6 @@ import { createPost } from '../../services/postServices'
 import { createImage } from '../../services/postServices'
 import toast from 'react-hot-toast';
 
-
 export const NewsForm: React.FC = () => {
   const [title, setTitle] = useState('')
   const [image, setImage] = useState<File | null>(null)
@@ -20,7 +19,6 @@ export const NewsForm: React.FC = () => {
     if (file) {
       setImage(file)
 
-      // Crear una vista previa de la imagen
       const reader = new FileReader()
       reader.onloadend = () => {
         setImagePreview(reader.result as string)
@@ -39,6 +37,7 @@ export const NewsForm: React.FC = () => {
       description: content,
       datePost: fecha,
     }
+
 
     try {
       if (image) {
@@ -60,6 +59,8 @@ export const NewsForm: React.FC = () => {
     try {
       const { data, error } = await createPost(dataPost)
 
+      const { data, error } = await createPost(dataPost)
+
       if (error) {
         console.error('Error al crear el post:', error)
         toast.error('Error al crear el post')
@@ -77,7 +78,7 @@ export const NewsForm: React.FC = () => {
   }
 
   return (
-    <section className='formNews my-24'>
+    <section className="formNews my-24">
       <div className="max-w-2xl mx-auto p-4 text-center">
         <h2 className="text-2xl font-bold mb-4">Crear Nueva Noticia</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -166,6 +167,5 @@ export const NewsForm: React.FC = () => {
         </form>
       </div>
     </section>
-
   )
 }

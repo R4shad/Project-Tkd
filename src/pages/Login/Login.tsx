@@ -34,14 +34,12 @@ export const Login: React.FC = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {/* Login Section */}
       <div className="w-full md:w-1/2 flex items-center justify-center p-6 bg-white shadow-lg rounded-lg">
         <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-6">
           <h2 className="text-3xl font-bold text-center mb-6 text-gray-700">
             Iniciar Sesión
           </h2>
 
-          {/* Email */}
           <input
             type="email"
             placeholder="Correo electrónico"
@@ -51,7 +49,6 @@ export const Login: React.FC = () => {
             required
           />
 
-          {/* Password */}
           <input
             type="password"
             placeholder="Contraseña"
@@ -67,7 +64,6 @@ export const Login: React.FC = () => {
             </div>
           )}
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200"

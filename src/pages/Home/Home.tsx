@@ -1,13 +1,14 @@
-import { Hero } from './Components/Hero'
+import { HeroSection } from './Components/HeroSection'
 import logo from '../../assets/logo.jpg'
-import Teams from './Components/Teams'
-import { ClubSlider } from './Components/ClubSlider'
-import { TaekwondoBenefits } from './Components/TaekwondoBenefits'
-import Description from './Components/Description'
+import { InformationSection } from './Components/InformationSection'
+import { ClubSliderSection } from './Components/ClubSliderSection'
+import { BenefitsSection } from './Components/TaekwondoBenefits'
+import { DescriptionSection } from './Components/DescriptionSection'
 
-import { Affiliation } from './Components/Affiliation'
+import { AffiliationSection } from './Components/AffiliationSection'
 import { useEffect, useRef } from 'react'
 import { useScroll } from '../../hooks/useScroll'
+import { PostSection } from './Components/PostSection'
 
 export const Home = () => {
   const clubsSectionRef = useRef<HTMLDivElement>(null)
@@ -22,13 +23,13 @@ export const Home = () => {
   useEffect(() => {
     if (scrollTarget === 'clubs') {
       clubsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
-      setScrollTarget(null) // Limpias después de hacer el scroll
+      setScrollTarget(null)
     }
   }, [scrollTarget, setScrollTarget])
 
   return (
     <>
-      <Hero
+      <HeroSection
         image={logo}
         title={'Asociación Municipal de TaeKwonDo Quillacollo'}
         description={
@@ -36,15 +37,15 @@ export const Home = () => {
         }
         onScrollClick={scrollToClubs}
       />
-      {/* <Description /> */}
-      <Description />
-      {/* <Teams /> */}
-      <Teams />
-      {/*  <Maps /> */}
 
-      <ClubSlider ref={clubsSectionRef} />
-      <TaekwondoBenefits />
-      <Affiliation />
+      <DescriptionSection />
+
+      <InformationSection />
+
+      <ClubSliderSection ref={clubsSectionRef} />
+      <BenefitsSection />
+      <PostSection />
+      <AffiliationSection />
     </>
   )
 }
