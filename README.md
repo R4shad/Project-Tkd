@@ -1,71 +1,72 @@
-# Proyecto Taekwondo - Asociación Municipal de Taekwondo Quillacollo
+# Taekwondo Project - Quillacollo Municipal Taekwondo Association
 
-Este proyecto es una aplicación web diseñada para gestionar la **Asociación Municipal de Taekwondo Quillacollo**, brindando herramientas para la gestión de clubes afiliados, actividades, y reportes de ingresos. El objetivo principal es facilitar la administración de las actividades deportivas y mejorar la visibilidad de la asociación.
+This project is a web application designed to manage the **Quillacollo Municipal Taekwondo Association**, providing tools for managing affiliated clubs, activities, and income reports. The main goal is to facilitate the administration of sports activities and improve the visibility of the association.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 - **Frontend**:
 
-  - **React**: Framework de JavaScript para construir interfaces de usuario interactivas y dinámicas.
-  - **TypeScript**: Superconjunto de JavaScript que agrega tipado estático, lo que facilita la detección temprana de errores y mejora la mantenibilidad del código.
-  - **TailwindCSS**: Framework CSS para diseño eficiente y altamente personalizable, permitiendo un desarrollo rápido y limpio.
-  - **Vite**: Herramienta de construcción y empaquetado extremadamente rápida para aplicaciones modernas.
-  - **React Router**: Librería para la gestión de rutas y navegación en aplicaciones React.
-  - **React-Icons**: Librería de íconos para facilitar la integración de iconos de forma sencilla en la interfaz.
-  - **React-Helmet-Async**: Utilizado para gestionar dinámicamente el título de la página y las etiquetas meta de cada página.
-  - **Swiper**: Librería de deslizadores para crear interfaces atractivas con deslizamientos, como la visualización de clubes.
-  - **React-Quill**: Editor de texto enriquecido para crear y editar contenido, útil para manejar publicaciones o noticias de la asociación.
-  - **Supabase**: Base de datos y autenticación backend para manejar datos de manera eficiente y segura.
+  - **React**: A JavaScript framework for building interactive and dynamic user interfaces.
+  - **TypeScript**: A superset of JavaScript that adds static typing, making error detection earlier and improving code maintainability.
+  - **TailwindCSS**: A highly customizable CSS framework for efficient and rapid development with a clean design.
+  - **Vite**: An extremely fast build and bundling tool for modern applications.
+  - **React Router**: A library for managing routes and navigation within React applications.
+  - **React-Icons**: A library of icons to easily integrate icons into the interface.
+  - **React-Helmet-Async**: Used to dynamically manage page titles and meta tags.
+  - **Swiper**: A library for creating attractive slider interfaces, such as displaying clubs.
+  - **React-Quill**: A rich text editor for creating and editing content, useful for handling association news and publications.
+  - **Supabase**: A backend service for database management, authentication, and real-time data handling.
 
 - **Backend**:
-  - **Supabase**: Se utilizó para gestionar la base de datos de la aplicación, incluyendo funcionalidades de autenticación, almacenamiento y gestión de datos en tiempo real.
+  - **Supabase**: Used to manage the application’s database, including authentication, storage, and real-time data management.
 
-## Buenas Prácticas de Desarrollo
+## Development Best Practices
 
-- **Modularización del Código**: El proyecto está estructurado en componentes reutilizables y bien organizados para facilitar el mantenimiento y escalabilidad.
-- **Uso de TypeScript**: Asegura que el código sea más predecible y fácil de depurar, utilizando tipos estrictos para evitar errores comunes.
-- **Documentación y Comentarios**: Se ha documentado y comentado el código de manera adecuada para facilitar la comprensión de los desarrolladores que trabajen en el proyecto en el futuro.
-- **Manejo de Estado con Hooks**: Uso de hooks de React para gestionar el estado de forma eficiente, manteniendo el código limpio y sin complicaciones.
-- **Prácticas de Accesibilidad**: El diseño y la estructura de la interfaz de usuario están orientados a ser accesibles y fáciles de usar por cualquier persona.
+- **Code Modularization**: The project is structured into reusable and well-organized components to facilitate maintainability and scalability.
+- **Use of TypeScript**: Ensures the code is more predictable and easier to debug, utilizing strict types to prevent common errors.
+- **Documentation and Comments**: The code is documented and commented adequately to make it easier for developers who work on the project in the future.
+- **State Management with Hooks**: React hooks are used to manage state efficiently, keeping the code clean and straightforward.
+- **Accessibility Best Practices**: The design and structure of the user interface are aimed at being accessible and user-friendly for everyone.
 
-## Beneficios y Soluciones para la Asociación
+## Benefits and Solutions for the Association
 
-### **Visibilidad y Gestión Eficiente de Clubes**
+### **Visibility and Efficient Club Management**
 
-- La aplicación proporciona una **vista clara y organizada de los clubes afiliados**, con detalles de cada uno y la opción de consultar información adicional de manera rápida.
-- Los usuarios pueden **navegar fácilmente entre clubes**, con botones de llamada a la acción como "Clubes Afiliados", lo que facilita la interacción.
+- The application provides a **clear and organized view of affiliated clubs**, with details of each club and the option to quickly view additional information.
+- Users can **easily navigate between clubs**, with call-to-action buttons such as "Affiliated Clubs," making interaction seamless.
 
-### **Automatización de Reportes de Ingresos**
+### **Automation of Income Reports**
 
-- Se han implementado formularios y tablas de datos que permiten al personal generar **reportes diarios de ingresos** de forma sencilla y sin necesidad de cálculos manuales.
-- La integración con **Supabase** permite almacenar los datos de manera eficiente y acceder a ellos en tiempo real.
+- Forms and data tables have been implemented, allowing staff to **generate daily income reports** easily without manual calculations.
+- Integration with **Supabase** ensures efficient data storage and real-time access.
 
-### **Mejor Experiencia de Usuario**
+### **Improved User Experience**
 
-- Gracias a **React-Quill**, los usuarios pueden crear y editar contenido como noticias o actualizaciones de manera dinámica y sencilla.
-- La interfaz está diseñada para ser **responsive**, asegurando que la aplicación sea accesible desde cualquier dispositivo, desde teléfonos móviles hasta escritorios.
+- Thanks to **React-Quill**, users can create and edit content such as news or updates dynamically and easily.
+- The interface is designed to be **responsive**, ensuring the application is accessible from any device, from mobile phones to desktops.
 
-### **Optimización de Recursos**
+### **Resource Optimization**
 
-- La aplicación está optimizada para ofrecer tiempos de carga rápidos, utilizando **Vite** para la construcción eficiente y **TailwindCSS** para un diseño limpio y adaptable.
+- The application is optimized for fast loading times, using **Vite** for efficient building and **TailwindCSS** for a clean, adaptable design.
 
-## Instalación
+## Installation
 
-1. Clona el repositorio:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/R4shad/Project-Tkd
 
+
    ```
 
-2. Instala las dependencias:
+2. Install the dependencies:
 
    ```bash
    npm install
 
    ```
 
-3. Inicia el servidor de desarrollo:
+3. Start the development server:
    ```bash
    npm run dev
    ```
