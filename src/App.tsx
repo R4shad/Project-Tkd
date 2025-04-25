@@ -27,7 +27,7 @@ function App() {
               <Route path="/news" element={<NewsForm />} />
               <Route path="/admin/login" element={<Login />} />
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/publication/:title" element={<NewsView />} />
+              <Route path="/publication/:slugTitle" element={<NewsView />} />
             </Routes>
           </main>
           <Footer />
