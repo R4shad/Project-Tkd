@@ -58,11 +58,25 @@ export const NewsView: React.FC = () => {
       <Helmet>
         <title>{publication.title}</title>
         <meta name="description" content={publication.description} />
+
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={publication.title} />
         <meta property="og:description" content={publication.description} />
         <meta property="og:image" content={publication.imageUrl} />
-        <meta property="og:url" content={publication.slugTitle} />
+        <meta
+          property="og:url"
+          content={`https://tkdqllo.netlify.app/publication/${publication.slugTitle}`}
+        />
+        <meta property="og:site_name" content="A.M.T.K.D. Quillacollo" />
+
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={publication.title} />
+        <meta name="twitter:description" content={publication.description} />
+        <meta name="twitter:image" content={publication.imageUrl} />
+        <meta
+          name="twitter:url"
+          content={`https://tkdqllo.netlify.app/publication/${publication.slugTitle}`}
+        />
       </Helmet>
 
       <div className="max-w-7xl mx-auto p-4 flex flex-col gap-8">
