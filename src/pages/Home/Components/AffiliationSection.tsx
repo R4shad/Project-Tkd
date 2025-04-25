@@ -2,7 +2,7 @@ import WTBimg from './../../../assets/FBTKD.jpg'
 
 export const AffiliationSection = () => {
   return (
-    <section className="affiliation  py-14 md:py-28">
+    <section className="affiliation  py-14 md:py-28"  data-aos="fade-up" data-aos-duration="2000">
       <div className="flex flex-col items-center  text-center px-4 md:px-16">
         <h2 className="text-2xl sm:text-2xl md:text-4xl font-semibold mb-6">
           Afiliados a la Federación Boliviana de Taekwondo

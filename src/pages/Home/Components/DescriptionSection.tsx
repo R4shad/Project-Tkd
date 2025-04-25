@@ -2,7 +2,7 @@ import React from 'react'
 
 export const DescriptionSection: React.FC = () => {
   return (
-    <section className="description">
+    <section className="description"  data-aos="fade-up" data-aos-duration="2000">
       <div className="  mx-auto container gap-5 p-6">
         <div className="section__title text-center md:mb-24 mb-14">
           <h2 className="text-black text-3xl md:text-4xl font-bold">
