@@ -12,7 +12,7 @@ import { forwardRef } from 'react'
 
 export const ClubSliderSection = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <section className="club-slider md:py-16 py-14 ">
+    <section className="club-slider md:py-16 py-14 "  data-aos="fade-up" data-aos-duration="2000">
       <div className="section__title text-center md:mb-24 mb-14">
         <h2 className="text-black text-3xl md:text-4xl font-bold">
           Conoce nuestros clubes

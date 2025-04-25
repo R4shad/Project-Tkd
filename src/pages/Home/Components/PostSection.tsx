@@ -31,7 +31,7 @@ export const PostSection = () => {
   }, [])
 
   return (
-    <section ref={postSectionRef} className="team lg:py-16 ">
+    <section ref={postSectionRef} className="team lg:py-16 "  data-aos="fade-up" data-aos-duration="2000">
       <div className="container mx-auto px-6">
         <h2 className="text-black text-3xl md:text-4xl font-bold text-center mb-6 mt-10">
           Publicaciones Recientes
