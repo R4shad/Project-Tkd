@@ -11,6 +11,7 @@ import { NewsView } from './pages/NewsView/NewsView'
 import { ScrollProvider } from './context/ScrollProvider'
 import { ScrollToTop } from './Shared/ScrollTop'
 import { Toaster } from 'react-hot-toast'
+import { ProtectedRoute } from './Shared/ProtectedRoute'
 
 function App() {
   return (
@@ -24,9 +25,23 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/club/:name" element={<Club />} />
-              <Route path="/createPublication" element={<NewsForm />} />
+              <Route
+                path="/createPublication"
+                element={
+                  <ProtectedRoute>
+                    <NewsForm />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="/admin/login" element={<Login />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="/publication/:slugTitle" element={<NewsView />} />
             </Routes>
           </main>

@@ -1,12 +1,39 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useNavigate } from 'react-router-dom'
 import { useScroll } from '../hooks/useScroll'
 import logo from '../assets/logo.jpg'
+import { supabaseClient } from '../services/supaBaseService'
 export const Navbar = () => {
   const navigate = useNavigate()
   const { setScrollTarget } = useScroll()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const { data, error } = await supabaseClient.auth.getUser()
+
+        if (error) {
+          console.error('Error al obtener el usuario:', error)
+        } else {
+          console.log('Usuario:', data)
+          setIsAuthenticated(!!data.user)
+        }
+      } catch (error) {
+        console.error('Error inesperado:', error)
+      }
+    }
+
+    checkAuth()
+  }, [])
+
+  const handleLogout = async () => {
+    await supabaseClient.auth.signOut()
+    window.location.href = '/'
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -89,6 +116,14 @@ export const Navbar = () => {
             >
               Acerca de
             </button>
+            {isAuthenticated && (
+              <button
+                onClick={handleLogout}
+                className=" text-black font-bold px-6 py-2 rounded-lg border-2  border-black  "
+              >
+                Cerrar sesión
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -143,6 +178,14 @@ export const Navbar = () => {
             >
               Acerca de
             </a>
+            {isAuthenticated && (
+              <button
+                onClick={handleLogout}
+                className=" text-black font-bold px-6 py-2 rounded-lg border-2  border-black w-full  "
+              >
+                Cerrar sesión
+              </button>
+            )}
           </div>
         </div>
       </div>
