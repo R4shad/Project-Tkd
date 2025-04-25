@@ -1,8 +1,10 @@
 import { FaFacebookSquare, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useScroll } from '../hooks/useScroll'
 import { useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const Footer = () => {
+  const navigate = useNavigate()
   const aboutSectionRef = useRef<HTMLDivElement>(null)
   const { scrollTarget, setScrollTarget } = useScroll()
 
@@ -13,6 +15,10 @@ export const Footer = () => {
     }
   }, [scrollTarget, setScrollTarget])
 
+  const handleLogin = () => {
+    navigate('/admin/login')
+  }
+
   return (
     <footer
       ref={aboutSectionRef}
@@ -21,7 +27,10 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center pt-10 pb-4">
           <div>
-            <h2 className="text-xl  text-white text-center">
+            <h2
+              className="text-xl  text-white text-center"
+              onClick={handleLogin}
+            >
               Asociación Municipal
             </h2>
             <p className="text-sm">Cochabamba - Bolivia</p>
