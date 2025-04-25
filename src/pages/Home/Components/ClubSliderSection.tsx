@@ -53,7 +53,8 @@ const ItemSlider = ({ club }: { club: ClubInfo }) => {
   const navigate = useNavigate()
 
   const handleRedirect = () => {
-    navigate(`/club/${club.id}`)
+    const formattedName = club.clubName.replace(/\s+/g, '-').toLowerCase()
+    navigate(`/club/${formattedName}`)
   }
   return (
     <div

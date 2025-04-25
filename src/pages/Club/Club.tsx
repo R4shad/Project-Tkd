@@ -3,18 +3,40 @@ import { clubs } from '../../staticData'
 import ClubDescription from './Components/ClubDescription'
 import Maps from './Components/Maps'
 import { ClubImages } from './Components/ClubImages'
+import { Helmet } from 'react-helmet-async'
 
 export const Club = () => {
-  const { id } = useParams<{ id: string }>()
-  console.log(id)
-  const club = clubs.find((c) => c.id === Number(id))
-
+  const { name } = useParams<{ name: string }>()
+  const formattedName = name?.replace(/-/g, ' ')
+  console.log(formattedName)
+  const club = clubs.find((c) => c.clubName.toLowerCase() === formattedName)
+  console.log(clubs)
   if (!club) {
     return <div>Club not found</div>
   }
 
   return (
     <>
+      <Helmet>
+        <title>
+          {club.clubName} | Asociación Municipal de Taekwondo Quillacollo
+        </title>
+        <meta name="description" content={club.description} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={club.clubName} />
+        <meta property="og:description" content={club.description} />
+        <meta property="og:image" content={club.logoUrl} />
+        <meta
+          property="og:url"
+          content={`https://tkdqllo.netlify.app/club/${name}`}
+        />
+        <meta property="og:site_name" content="A.M.T.K.D. Quillacollo" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={club.clubName} />
+        <meta name="twitter:description" content={club.description} />
+        <meta name="twitter:image" content={club.images[0]} />
+      </Helmet>
       <ClubDescription club={club} />
 
       <section className="description">

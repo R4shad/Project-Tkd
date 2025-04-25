@@ -27,7 +27,7 @@ export const antaraKwanInfo: ClubInfo = {
 
 export const lincesKwanInfo: ClubInfo = {
   id: 2,
-  clubName: 'Academia de Taekwondo Linces',
+  clubName: 'Academia de Taekwondo Linces Kwan',
   foundationDate: '12 de marzo del 2012',
   headInstructorName: 'Mauricio Campero',
   description:
@@ -51,7 +51,7 @@ export const lincesKwanInfo: ClubInfo = {
 
 export const relampagosKwanInfo: ClubInfo = {
   id: 3,
-  clubName: 'Academia de Taekwondo Relámpagos Kwan ',
+  clubName: 'Academia de Taekwondo Relámpagos Kwan',
   foundationDate: '28 de Septiembre, 2017',
   headInstructorName: 'Erick Trujillo',
   description:
@@ -76,7 +76,7 @@ export const relampagosKwanInfo: ClubInfo = {
 
 export const aguilasKwanInfo: ClubInfo = {
   id: 4,
-  clubName: 'Academia de Taekwondo "Águilas Kwan"',
+  clubName: 'Academia de Taekwondo Águilas Kwan',
   foundationDate: '24 de julio del 1999',
   headInstructorName: 'Henry Mercado',
   description:
