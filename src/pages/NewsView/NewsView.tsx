@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { FaFacebookF, FaWhatsapp, FaLink } from 'react-icons/fa'
 import { NewsPostData } from '../../interfaces/types'
 import { getRelatedNews, getSpecificPost } from '../../services/postServices'
@@ -12,6 +12,8 @@ export const NewsView: React.FC = () => {
   const [publication, setPublication] = useState<NewsPostData | null>(null)
   const [relatedNews, setRelatedNews] = useState<NewsPostData[] | null>([])
 
+  const navigate = useNavigate()
+
   useEffect(() => {
     const getPublicaiton = async () => {
       const { data, error } = await getSpecificPost(slugTitle)
@@ -19,18 +21,19 @@ export const NewsView: React.FC = () => {
         console.error('Error fetching publication:', error)
       } else {
         setPublication(data[0])
-      }
-    }
 
-    const getRelatedPublications = async () => {
-      const data: NewsPostData[] | null = await getRelatedNews()
-      if (!data) {
-        console.error('Error fetching publications')
-      } else {
-        setRelatedNews(data)
+        //get related posts
+        const related: NewsPostData[] | null = await getRelatedNews()
+        if (!related) {
+          console.error('Error fetching publications')
+        } else {
+          const filteredRelated = related.filter(
+            (item) => item.id !== data[0].id
+          )
+          setRelatedNews(filteredRelated)
+        }
       }
     }
-    getRelatedPublications()
     getPublicaiton()
   }, [slugTitle])
 
@@ -38,6 +41,10 @@ export const NewsView: React.FC = () => {
     const currentUrl = window.location.href
     navigator.clipboard.writeText(currentUrl)
     toast.success('¡Enlace copiado al portapapeles!')
+  }
+
+  const goToRelatedNews = (slugTitle: string) => {
+    navigate(`/publication/${slugTitle}`)
   }
 
   if (!publication)
@@ -126,6 +133,9 @@ export const NewsView: React.FC = () => {
                 <div
                   key={item.id}
                   className="bg-gray-100 rounded-lg overflow-hidden hover:bg-gray-200 cursor-pointer"
+                  onClick={() => {
+                    goToRelatedNews(item.slugTitle)
+                  }}
                 >
                   <img
                     src={item.imageUrl}

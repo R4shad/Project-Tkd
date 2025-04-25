@@ -38,7 +38,7 @@ export const getRelatedNews = async () => {
     .from('posts')
     .select('*')
     .order('datePost', { ascending: false })
-    .limit(3)
+    .limit(4)
 
   if (error) {
     console.error('Error fetching related news:', error)

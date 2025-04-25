@@ -56,7 +56,7 @@ export const Dashboard: React.FC = () => {
   }
 
   const handleNewNews = () => {
-    navigate('/news')
+    navigate('/createPublication')
   }
 
   const handleNewsNavegation = (slugTitle: string) => {
