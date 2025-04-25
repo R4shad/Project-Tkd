@@ -4,15 +4,15 @@ import 'react-quill/dist/quill.snow.css'
 import { NewsPostData } from '../../interfaces/types'
 import { createPost } from '../../services/postServices'
 import { createImage } from '../../services/postServices'
-import toast from 'react-hot-toast';
+import toast from 'react-hot-toast'
 
 export const NewsForm: React.FC = () => {
   const [title, setTitle] = useState('')
   const [image, setImage] = useState<File | null>(null)
   const [imagePreview, setImagePreview] = useState<string | null>(null)
-  const [fecha, setFecha] = useState('');
+  const [fecha, setFecha] = useState('')
   const [content, setContent] = useState('')
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -27,10 +27,9 @@ export const NewsForm: React.FC = () => {
     }
   }
 
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setLoading(true);
+    setLoading(true)
     const dataPost: NewsPostData = {
       title: title,
       imageUrl: '',
@@ -38,14 +37,12 @@ export const NewsForm: React.FC = () => {
       datePost: fecha,
     }
 
-
     try {
       if (image) {
         const { data, publicUrl, error } = await createImage(image)
         if (publicUrl) {
           console.log('Imagen subida con éxito:', data)
-          dataPost.imageUrl = publicUrl;
-
+          dataPost.imageUrl = publicUrl
         } else {
           console.error('Error al subir la imagen:', error)
         }
@@ -66,12 +63,18 @@ export const NewsForm: React.FC = () => {
         console.log('Post creado con éxito:', data)
 
         toast.success('Post creado con éxito')
+
+        setTitle('')
+        setImage(null)
+        setImagePreview(null)
+        setContent('')
+        setFecha('')
       }
     } catch (error) {
       console.error('Error al crear el post', error)
       toast.error('Error al crear el post')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   }
 
@@ -81,8 +84,10 @@ export const NewsForm: React.FC = () => {
         <h2 className="text-2xl font-bold mb-4">Crear Nueva Noticia</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           {/* Título */}
-          <div className='form-tittle flex-col flex gap-2'>
-            <label htmlFor="titulo" className="text-left">Título de la noticia</label>
+          <div className="form-tittle flex-col flex gap-2">
+            <label htmlFor="titulo" className="text-left">
+              Título de la noticia
+            </label>
             <input
               type="text"
               placeholder="Titular de la noticia"
@@ -93,24 +98,26 @@ export const NewsForm: React.FC = () => {
             />
           </div>
 
-
           {/* Fecha */}
-          <div className='form-fecha flex-col flex gap-2'>
-            <label htmlFor="fecha" className="text-left">Fecha de la noticia</label>
+          <div className="form-fecha flex-col flex gap-2">
+            <label htmlFor="fecha" className="text-left">
+              Fecha de la noticia
+            </label>
             <input
               type="date"
               value={fecha}
-              placeholder='Fecha de la noticia'
+              placeholder="Fecha de la noticia"
               onChange={(e) => setFecha(e.target.value)}
               className="border rounded p-2"
               required
             />
           </div>
 
-
           {/* Imagen */}
           <div className="form-file flex-col flex gap-2">
-            <label htmlFor="imagen" className="text-left">Imagen de la noticia</label>
+            <label htmlFor="imagen" className="text-left">
+              Imagen de la noticia
+            </label>
             <input
               type="file"
               accept="image/*"
@@ -118,7 +125,6 @@ export const NewsForm: React.FC = () => {
               className="border rounded p-2"
               required
             />
-
           </div>
 
           {/* Preview de imagen */}
@@ -137,7 +143,9 @@ export const NewsForm: React.FC = () => {
 
           {/* Contenido */}
           <div className="form-contenido flex-col flex gap-2">
-            <label htmlFor="contenido" className="text-left">Contenido de la noticia</label>
+            <label htmlFor="contenido" className="text-left">
+              Contenido de la noticia
+            </label>
             <ReactQuill
               value={content}
               onChange={setContent}
@@ -149,8 +157,12 @@ export const NewsForm: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-             className={`text-custom-primary-color font-bold px-6 py-2 rounded-lg border-2 border-custom-primary-color 
-              ${loading ? 'bg-gray-300 text-gray-600 cursor-not-allowed' : 'hover:bg-black hover:text-white hover:border-black'}`}
+            className={`text-custom-primary-color font-bold px-6 py-2 rounded-lg border-2 border-custom-primary-color 
+              ${
+                loading
+                  ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
+                  : 'hover:bg-black hover:text-white hover:border-black'
+              }`}
           >
             {loading ? (
               <div className="flex items-center justify-center gap-2">
@@ -161,7 +173,6 @@ export const NewsForm: React.FC = () => {
               'Publicar'
             )}
           </button>
-
         </form>
       </div>
     </section>

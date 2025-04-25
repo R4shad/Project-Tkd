@@ -4,37 +4,33 @@ import { getPosts } from '../../services/postServices'
 import { deletePost } from '../../services/postServices'
 import toast from 'react-hot-toast'
 
-
-
 export const Dashboard: React.FC = () => {
   const [newsList, setNewsList] = useState<NewsPostData[]>([
     {
-      id: "1",
+      id: '1',
       title: 'Niño de Pando gana la Copa Master',
       description: `<p>Fue el único taekwondista de Pando participante en la Copa Master Internacional, que concluyó el sábado en el poligimnasio Santa Rosita y que contó con más de 400 participantes.</p><p>Llegar a Santa Cruz fue un doble esfuerzo para Fabiano Ribera Rojas, de 8 años, y su padre y entrenador, Josemar Rojas Montero.</p><p>Por todo ello, la celebración del título en la categoría pre-infantil hasta 45 kilos fue a todo pulmón entre Fabiano y Josemar.</p>`,
       imageUrl:
         'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l2_no7sjw.jpg',
       datePost: '2025-04-20',
     },
-   
   ])
-   useEffect(() => {
+  useEffect(() => {
     const getDataPost = async () => {
       const { data, error } = await getPosts()
       if (error) {
         console.error('Error al obtener los posts:', error)
       } else {
-        if(data){
+        if (data) {
           setNewsList(data)
-        }else{
+        } else {
           console.error('No se encontraron posts')
           toast.error('No se encontraron posts')
         }
       }
     }
     getDataPost()
-  },[])
-   
+  }, [])
 
   const handleDelete = (id: string) => {
     const confirmDelete = window.confirm(
@@ -45,16 +41,36 @@ export const Dashboard: React.FC = () => {
       deletePostData(id)
     }
   }
-  const deletePostData = async (id:string) => {
+  const deletePostData = async (id: string) => {
     const { data, error } = await deletePost(id)
     if (error) {
       console.error('Error al eliminar el post:', error)
     } else {
       console.log('Post eliminado con éxito:', data)
       toast.success('Post eliminado con éxito')
-     
     }
   }
+
+  const handleShare = (title: string) => {
+    const slug = slugify(title)
+    const baseUrl =
+      window.location.hostname === 'localhost'
+        ? 'http://localhost:5173'
+        : 'https://tkdqllo.netlify.app'
+    const url = `${baseUrl}/publication/${slug}`
+    navigator.clipboard.writeText(url)
+    toast.success('¡Enlace copiado al portapapeles!')
+  }
+
+  const slugify = (text: string) =>
+    text
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/[^\w-]+/g, '')
+      .replace(/--+/g, '-')
+      .replace(/^-+|-+$/g, '')
 
   return (
     <div className="max-w-4xl mx-auto p-4">
@@ -81,9 +97,7 @@ export const Dashboard: React.FC = () => {
                 )}
                 <div className="text-left flex-1">
                   <h3 className="text-lg font-semibold">{news.title}</h3>
-                  <p className="text-sm text-gray-400">
-                    { news.datePost}
-                  </p>
+                  <p className="text-sm text-gray-400">{news.datePost}</p>
 
                   <div
                     className="text-gray-600 text-sm mt-2 line-clamp-3"
@@ -96,6 +110,12 @@ export const Dashboard: React.FC = () => {
                 className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold w-full md:w-auto"
               >
                 Eliminar
+              </button>
+              <button
+                onClick={() => handleShare(news.title)}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
+              >
+                Compartir
               </button>
             </div>
           ))}
