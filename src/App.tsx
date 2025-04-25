@@ -10,25 +10,30 @@ import { Dashboard } from './pages/Dashboard/Dashboard'
 import { NewsView } from './pages/NewsView/NewsView'
 import { ScrollProvider } from './context/ScrollProvider'
 import { ScrollToTop } from './Shared/ScrollTop'
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   return (
-    <><Toaster position="top-right" /><ScrollProvider>
-      <Router>
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/club/:id" element={<Club />} />
-          <Route path="/news" element={<NewsForm />} />
-          <Route path="/admin/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/publication/:id" element={<NewsView />} />
-        </Routes>
-        <Footer />
-      </Router>
-    </ScrollProvider></>
+    <div className="flex flex-col min-h-screen">
+      <Toaster position="top-right" />
+      <ScrollProvider>
+        <Router>
+          <ScrollToTop />
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/club/:id" element={<Club />} />
+              <Route path="/news" element={<NewsForm />} />
+              <Route path="/admin/login" element={<Login />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/publication/:title" element={<NewsView />} />
+            </Routes>
+          </main>
+          <Footer />
+        </Router>
+      </ScrollProvider>
+    </div>
   )
 }
 

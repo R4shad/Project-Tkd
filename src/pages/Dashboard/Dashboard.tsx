@@ -3,18 +3,12 @@ import { NewsPostData } from '../../interfaces/types'
 import { getPosts } from '../../services/postServices'
 import { deletePost } from '../../services/postServices'
 import toast from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 
 export const Dashboard: React.FC = () => {
-  const [newsList, setNewsList] = useState<NewsPostData[]>([
-    {
-      id: '1',
-      title: 'Niño de Pando gana la Copa Master',
-      description: `<p>Fue el único taekwondista de Pando participante en la Copa Master Internacional, que concluyó el sábado en el poligimnasio Santa Rosita y que contó con más de 400 participantes.</p><p>Llegar a Santa Cruz fue un doble esfuerzo para Fabiano Ribera Rojas, de 8 años, y su padre y entrenador, Josemar Rojas Montero.</p><p>Por todo ello, la celebración del título en la categoría pre-infantil hasta 45 kilos fue a todo pulmón entre Fabiano y Josemar.</p>`,
-      imageUrl:
-        'https://res.cloudinary.com/ddkjviwgt/image/upload/v1745286450/l2_no7sjw.jpg',
-      datePost: '2025-04-20',
-    },
-  ])
+  const [newsList, setNewsList] = useState<NewsPostData[]>([])
+
+  const navigate = useNavigate()
   useEffect(() => {
     const getDataPost = async () => {
       const { data, error } = await getPosts()
@@ -51,33 +45,37 @@ export const Dashboard: React.FC = () => {
     }
   }
 
-  const handleShare = (title: string) => {
-    const slug = slugify(title)
+  const handleShare = (slugTitle: string) => {
     const baseUrl =
       window.location.hostname === 'localhost'
         ? 'http://localhost:5173'
         : 'https://tkdqllo.netlify.app'
-    const url = `${baseUrl}/publication/${slug}`
+    const url = `${baseUrl}/publication/${slugTitle}`
     navigator.clipboard.writeText(url)
     toast.success('¡Enlace copiado al portapapeles!')
   }
 
-  const slugify = (text: string) =>
-    text
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/[^\w-]+/g, '')
-      .replace(/--+/g, '-')
-      .replace(/^-+|-+$/g, '')
+  const handleNewNews = () => {
+    navigate('/news')
+  }
+
+  const handleNewsNavegation = (slugTitle: string) => {
+    navigate(`/publication/${slugTitle}`)
+  }
 
   return (
     <div className="max-w-4xl mx-auto p-4">
       <h2 className="text-3xl font-bold mb-6 text-center">
         Administrar Noticias
       </h2>
-
+      <div className="flex  justify-end mb-4">
+        <button
+          className="  font-bold px-6 py-2 rounded-lg border-2   hover:bg-black hover:text-white hover:border-black"
+          onClick={handleNewNews}
+        >
+          Crear Noticia
+        </button>
+      </div>
       {newsList.length === 0 ? (
         <p className="text-center text-gray-500">No hay noticias publicadas.</p>
       ) : (
@@ -96,7 +94,14 @@ export const Dashboard: React.FC = () => {
                   />
                 )}
                 <div className="text-left flex-1">
-                  <h3 className="text-lg font-semibold">{news.title}</h3>
+                  <h3
+                    className="text-lg font-semibold cursor-pointer"
+                    onClick={() => {
+                      handleNewsNavegation(news.slugTitle)
+                    }}
+                  >
+                    {news.title}
+                  </h3>
                   <p className="text-sm text-gray-400">{news.datePost}</p>
 
                   <div
@@ -112,7 +117,7 @@ export const Dashboard: React.FC = () => {
                 Eliminar
               </button>
               <button
-                onClick={() => handleShare(news.title)}
+                onClick={() => handleShare(news.slugTitle)}
                 className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
               >
                 Compartir

@@ -5,6 +5,7 @@ import { NewsPostData } from '../../interfaces/types'
 import { createPost } from '../../services/postServices'
 import { createImage } from '../../services/postServices'
 import toast from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 
 export const NewsForm: React.FC = () => {
   const [title, setTitle] = useState('')
@@ -13,6 +14,8 @@ export const NewsForm: React.FC = () => {
   const [fecha, setFecha] = useState('')
   const [content, setContent] = useState('')
   const [loading, setLoading] = useState(false)
+
+  const navigate = useNavigate()
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -27,11 +30,23 @@ export const NewsForm: React.FC = () => {
     }
   }
 
+  const slugify = (text: string) =>
+    text
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/[^\w-]+/g, '')
+      .replace(/--+/g, '-')
+      .replace(/^-+|-+$/g, '')
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
+
     const dataPost: NewsPostData = {
       title: title,
+      slugTitle: slugify(title),
       imageUrl: '',
       description: content,
       datePost: fecha,
@@ -69,6 +84,7 @@ export const NewsForm: React.FC = () => {
         setImagePreview(null)
         setContent('')
         setFecha('')
+        navigate('/dashboard')
       }
     } catch (error) {
       console.error('Error al crear el post', error)
