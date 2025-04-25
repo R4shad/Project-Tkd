@@ -31,7 +31,7 @@ const listTeams: CardProps[] = [
 
 export const InformationSection: React.FC = () => {
   return (
-    <section className="team lg:py-16 ">
+    <section className="team lg:py-16 "  data-aos="fade-up" data-aos-duration="2000">
       <div className="container mx-auto px-6">
         <div className="team__cards flex flex-wrap justify-center gap-6">
           {listTeams.map((team) => (
