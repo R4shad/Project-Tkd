@@ -34,10 +34,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/club/:id" element={<Club />} />
-            <Route path="/news" element={<NewsForm />} />
+            <Route path="/createPublication" element={<NewsForm />} />
             <Route path="/admin/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/publication/:id" element={<NewsView />} />
+            <Route path="/publication/:slugTitle" element={<NewsView />} />
           </Routes>
           <Footer />
         </Router>

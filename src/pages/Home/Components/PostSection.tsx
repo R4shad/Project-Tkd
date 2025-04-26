@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import { useScroll } from '../../../hooks/useScroll'
 import { NewsPostData } from '../../../interfaces/types'
-import { getRelatedNews } from '../../../services/postServices'
+import { getLatestPosts } from '../../../services/postServices'
 import PostCard from './PostCard'
 
 export const PostSection = () => {
@@ -20,7 +20,7 @@ export const PostSection = () => {
 
   useEffect(() => {
     const fetchLatestNews = async () => {
-      const data: NewsPostData[] | null = await getRelatedNews()
+      const data: NewsPostData[] | null = await getLatestPosts()
       if (!data) {
         console.error('Error fetching publications')
       } else {
@@ -31,7 +31,12 @@ export const PostSection = () => {
   }, [])
 
   return (
-    <section ref={postSectionRef} className="team lg:py-16 "  data-aos="fade-up" data-aos-duration="2000">
+    <section
+      ref={postSectionRef}
+      className="team lg:py-16 "
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <div className="container mx-auto px-6">
         <h2 className="text-black text-3xl md:text-4xl font-bold text-center mb-6 mt-10">
           Publicaciones Recientes

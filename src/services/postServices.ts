@@ -48,6 +48,21 @@ export const getRelatedNews = async () => {
   }
 }
 
+export const getLatestPosts = async () => {
+  const { data, error } = await supabaseClient
+    .from('posts')
+    .select('*')
+    .order('datePost', { ascending: false })
+    .limit(3)
+
+  if (error) {
+    console.error('Error fetching related news:', error)
+    return null
+  } else {
+    return data
+  }
+}
+
 //create a new image in the storage
 export const createImage = async (file: File) => {
   const filePath = `posts/${file.name}`
