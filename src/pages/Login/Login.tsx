@@ -11,12 +11,9 @@ export const Login: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log({ email, password })
-
     try {
       login(email, password)
         .then((response) => {
-          console.log(response)
           if (response.data.user === null) {
             setError('Datos incorrectos')
           } else {

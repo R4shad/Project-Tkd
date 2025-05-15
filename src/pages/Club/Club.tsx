@@ -8,9 +8,7 @@ import { Helmet } from 'react-helmet-async'
 export const Club = () => {
   const { name } = useParams<{ name: string }>()
   const formattedName = name?.replace(/-/g, ' ')
-  console.log(formattedName)
   const club = clubs.find((c) => c.clubName.toLowerCase() === formattedName)
-  console.log(clubs)
   if (!club) {
     return <div>Club not found</div>
   }

@@ -16,7 +16,6 @@ const Maps: React.FC<MapSectionProps> = ({ lat, lng }) => {
 
   const handleLocationChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const locationName = e.target.value as keyof typeof locations
-    console.log(locations[locationName])
     setSelectedLocation(locations[locationName])
   }
 

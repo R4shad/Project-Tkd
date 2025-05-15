@@ -28,8 +28,6 @@ export const getSpecificPost = async (slugTitle: string) => {
     .from('posts')
     .select('*')
     .eq('slugTitle', slugTitle)
-  console.log(slugTitle)
-  console.log(data)
   return { data, error }
 }
 //Get 3 posts from the database

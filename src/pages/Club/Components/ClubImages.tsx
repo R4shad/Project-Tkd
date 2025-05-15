@@ -1,5 +1,4 @@
 export const ClubImages = ({ images }: { images: string[] }) => {
-  console.log(images)
   return (
     <>
       <section className="px-4 py-16 text-center">

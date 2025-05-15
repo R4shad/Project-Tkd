@@ -17,7 +17,6 @@ export const Navbar = () => {
         const { data, error } = await supabaseClient.auth.getUser()
 
         if (!error) {
-          console.log('Usuario:', data)
           setIsAuthenticated(!!data.user)
         }
       } catch (error) {

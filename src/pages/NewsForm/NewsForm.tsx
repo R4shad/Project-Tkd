@@ -62,8 +62,6 @@ export const NewsForm: React.FC = () => {
           console.error('Error al subir la imagen:', error)
         }
       }
-
-      console.log('Imagen subida:', dataPost.imageUrl)
     } catch (error) {
       console.error('Error al subir la imagen', error)
     }
