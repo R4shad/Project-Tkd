@@ -105,7 +105,7 @@ export const NewsView: React.FC = () => {
               dangerouslySetInnerHTML={{ __html: publication.description }}
             />
 
-            <div className="flex items-center gap-6 mt-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-6">
               <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
                   window.location.href
