@@ -12,17 +12,24 @@ import { PostSection } from './Components/PostSection'
 
 export const Home = () => {
   const clubsSectionRef = useRef<HTMLDivElement>(null)
-
+  const postSectionRef = useRef<HTMLDivElement>(null)
   const { scrollTarget, setScrollTarget } = useScroll()
 
   const scrollToClubs = () => {
-    console.log('cliecked')
     clubsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const scrollToPosts = () => {
+    postSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
   useEffect(() => {
     if (scrollTarget === 'clubs') {
       clubsSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+      setScrollTarget(null)
+    }
+    if (scrollTarget === 'posts') {
+      postSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
       setScrollTarget(null)
     }
   }, [scrollTarget, setScrollTarget])
@@ -35,7 +42,8 @@ export const Home = () => {
         description={
           'Creemos que el deporte es una escuela de vida. Promovemos la formación de campeones no solo en el tatami, sino también en la vida, cultivando valores como el respeto, la disciplina y la perseverancia. Trabajamos día a día para fomentar una vida sana, fortalecer el espíritu y construir un futuro lleno de oportunidades para nuestros jóvenes.'
         }
-        onScrollClick={scrollToClubs}
+        scrollToClubs={scrollToClubs}
+        scrollToPosts={scrollToPosts}
       />
 
       <DescriptionSection />
@@ -44,7 +52,7 @@ export const Home = () => {
 
       <ClubSliderSection ref={clubsSectionRef} />
       <BenefitsSection />
-      <PostSection />
+      <PostSection ref={postSectionRef} />
       <AffiliationSection />
     </>
   )
