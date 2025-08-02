@@ -1,7 +1,1 @@
-# Redirige a Prerender solo bots
-/*  https://service.prerender.io/ 200
-  User-Agent=googlebot|bingbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator
-  X-Prerender-Token=SadkQVEC8b1vZrszeLyz
-
-# Redirige todo lo demás a index.html para la SPA
-/*    /index.html   200
+/*    /index.html    200
