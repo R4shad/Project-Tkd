@@ -18,7 +18,6 @@ export const PostCard: React.FC<NewsPostData> = ({
       className="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
       onClick={handleClick}
     >
-
       <div className="relative w-full h-72">
         <img
           className="w-full h-full object-cover mt-4"

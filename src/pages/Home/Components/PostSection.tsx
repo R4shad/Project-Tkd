@@ -1,23 +1,11 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState, forwardRef } from 'react'
 
-import { useScroll } from '../../../hooks/useScroll'
 import { NewsPostData } from '../../../interfaces/types'
 import { getLatestPosts } from '../../../services/postServices'
 import PostCard from './PostCard'
 
-export const PostSection = () => {
-  const postSectionRef = useRef<HTMLDivElement>(null)
-  const { scrollTarget, setScrollTarget } = useScroll()
-
+export const PostSection = forwardRef<HTMLDivElement>((_, ref) => {
   const [latestNews, setLatestNews] = useState<NewsPostData[]>([])
-
-  useEffect(() => {
-    if (scrollTarget === 'posts') {
-      postSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
-      setScrollTarget(null)
-    }
-  }, [scrollTarget, setScrollTarget])
-
   useEffect(() => {
     const fetchLatestNews = async () => {
       const data: NewsPostData[] | null = await getLatestPosts()
@@ -32,8 +20,8 @@ export const PostSection = () => {
 
   return (
     <section
-      ref={postSectionRef}
-      className="team lg:py-16 "
+      ref={ref}
+      className="team lg:py-16"
       data-aos="fade-up"
       data-aos-duration="2000"
     >
@@ -49,4 +37,4 @@ export const PostSection = () => {
       </div>
     </section>
   )
-}
+})
