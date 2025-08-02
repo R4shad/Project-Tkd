@@ -1,3 +1,4 @@
-/*  https://service.prerender.io/  200
+# Redirige los bots a Prerender
+/*  https://service.prerender.io/ 200
+  User-Agent=googlebot|bingbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator
   X-Prerender-Token=SadkQVEC8b1vZrszeLyz
-  User-Agent=googlebot|bingbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator  Force
